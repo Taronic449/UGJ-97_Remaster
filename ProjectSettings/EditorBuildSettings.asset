@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: e7f54bf7087ed3340a9e33dbe453ab41
   - enabled: 1
-    path: Assets/Scenes/Battlefield.unity
+    path: Assets/Scenes/Test Scenes/Test Battlefield.unity
     guid: 9ac50017079a65b46b98fa1b454b3a26
   - enabled: 1
     path: Assets/Scenes/Match Over.unity
