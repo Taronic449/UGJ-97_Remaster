@@ -9,13 +9,25 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: e7f54bf7087ed3340a9e33dbe453ab41
   - enabled: 1
-    path: Assets/Scenes/Test Scenes/Test Battlefield.unity
-    guid: 9ac50017079a65b46b98fa1b454b3a26
+    path: Assets/Scenes/Controls.unity
+    guid: c3c4433495417b84d88f9089eec44114
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 3a5e62f37566e094c96480db7a0abce7
   - enabled: 1
     path: Assets/Scenes/Match Over.unity
     guid: eca8efd771ebc9b44bfd7234ce154b5e
   - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: a66d90a7e3f64544f9212a3adaa27ae1
+  - enabled: 1
     path: Assets/Scenes/Pause Menu.unity
     guid: b733cf025e5d14640bb242e27290c08c
+  - enabled: 1
+    path: Assets/Scenes/Select Player.unity
+    guid: 95ea9e3d4b117d44987a8ebc9e9b3b18
+  - enabled: 1
+    path: Assets/Scenes/Select Stage.unity
+    guid: a3cd24305b9ad284d909776c7c99e39b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a056fa88973cc6e4aba240f736218212, type: 2}

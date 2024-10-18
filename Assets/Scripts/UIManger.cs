@@ -61,7 +61,7 @@ public class UIManger : MonoBehaviour
             break;
 
             case Button.SelectPlayer:
-                SceneManager.LoadScene("SelectPlayer");
+                SceneManager.LoadScene("Select Player");
             break;
 
             case Button.StartGame:
@@ -71,9 +71,11 @@ public class UIManger : MonoBehaviour
             break;
 
             case Button.Credits:
+                SceneManager.LoadScene("Credits");
             break;
 
             case Button.Settings:
+                SceneManager.LoadScene("Options");
             break;
 
             case Button.Pause:
