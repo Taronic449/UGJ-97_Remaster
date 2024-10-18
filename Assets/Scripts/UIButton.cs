@@ -21,7 +21,8 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         myButton = GetComponent<Button>();
         text = GetComponentInChildren<TextMeshProUGUI>().transform;
-        text.GetComponent<RectTransform>().localPosition = new Vector2(0, 1);
+                text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, 0.4f);
+
 
         if (myButton != null)
         {
@@ -36,12 +37,13 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         if(brownButton)
-            text.GetComponent<RectTransform>().localPosition = new Vector2(0, 0);
+            text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, -0.6f);
     }
     public void OnPointerUp(PointerEventData eventData)
     {
         if(brownButton)
-            text.GetComponent<RectTransform>().localPosition = new Vector2(0, 1);
+            text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, 0.4f);
+
     }
 
     void OnButtonClick()
@@ -60,7 +62,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private IEnumerator RollUp()
     {
         RectTransform rect = GetComponent<RectTransform>();
-        float speed = 2;
+        float speed = 3;
 
         while(rect.sizeDelta.x > 11.125f)
         {
@@ -68,7 +70,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             transform.GetChild(0).GetComponent<RectTransform>().sizeDelta -= new Vector2(Time.deltaTime * speed, 0);
 
 
-            speed += Time.deltaTime * 180;
+            speed += Time.deltaTime * speed * 4;
             yield return null;
         }
 
