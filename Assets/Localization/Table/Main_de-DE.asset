@@ -22,6 +22,26 @@ MonoBehaviour:
     m_Localized: Start
     m_Metadata:
       m_Items: []
+  - m_Id: 3107027472384
+    m_Localized: Co-op
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3109023961088
+    m_Localized: Einstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3110898814976
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3366617141248
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3817563541504
+    m_Localized: Steuerung
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

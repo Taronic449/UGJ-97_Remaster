@@ -19,6 +19,26 @@ MonoBehaviour:
     m_Key: Play
     m_Metadata:
       m_Items: []
+  - m_Id: 3107027472384
+    m_Key: Co-op
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3109023961088
+    m_Key: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3817563541504
+    m_Key: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3110898814976
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3366617141248
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
