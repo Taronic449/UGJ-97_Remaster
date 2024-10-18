@@ -36,7 +36,9 @@ public class UIManger : MonoBehaviour
         Pause,
         Unpause,
         Death,
-        SelectPlayer
+        SelectPlayer,
+        Controls
+
     }
 
 
@@ -62,6 +64,10 @@ public class UIManger : MonoBehaviour
 
             case Button.SelectPlayer:
                 SceneManager.LoadScene("Select Player");
+            break;
+
+            case Button.Controls:
+                SceneManager.LoadScene("Controls");
             break;
 
             case Button.StartGame:

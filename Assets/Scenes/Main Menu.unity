@@ -250,7 +250,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.3
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &53755705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 3
+  function: 9
   brownButton: 1
   greenButton: 0
 --- !u!114 &762095356
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.3
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &762095358
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.3
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &1300779631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2599,7 +2599,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3.3
+  m_PixelsPerUnitMultiplier: 3
 --- !u!222 &1622014732
 CanvasRenderer:
   m_ObjectHideFlags: 0
