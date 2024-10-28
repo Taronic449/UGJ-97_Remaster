@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pingu - Programmer, QA Tester
+  m_text: Pingu - Programmer, QA Tester, German Translator
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85c33d056994fac469a515dab049beec, type: 2}
   m_sharedMaterial: {fileID: -7262163800916467132, guid: 85c33d056994fac469a515dab049beec, type: 2}
@@ -1076,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000038147, y: 57.8}
+  m_AnchoredPosition: {x: -0.000038147, y: 120}
   m_SizeDelta: {x: 1508.367, y: 310.8885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &838309183
