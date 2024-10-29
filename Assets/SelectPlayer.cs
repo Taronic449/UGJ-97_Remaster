@@ -1,50 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class SelectPlayer : MonoBehaviour
 {
-    private bool keyboardPlayerRegistered = false;
-    private bool gamepadPlayerRegistered = false;
-
-    public GameObject keyboardPlayer;
-    public GameObject gamepadPlayer;
+    public GameObject p1;
+    public GameObject p2;
 
     public byte count = 0;
 
-
-    void Update()
+    void Start()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && !keyboardPlayerRegistered)
-        {
-            RegisterPlayer("Keyboard");
-            keyboardPlayer.gameObject.SetActive(true);
-            keyboardPlayerRegistered = true;
-        }
-
-        if (Gamepad.current != null && Gamepad.current.dpad.down.wasPressedThisFrame && !gamepadPlayerRegistered)
-        {
-            RegisterPlayer("Gamepad");
-            gamepadPlayer.gameObject.SetActive(true);
-            gamepadPlayerRegistered = true;
-        }
-    }
-
-    void RegisterPlayer(string playerType)
-    {
-        Debug.Log($"{playerType} player registered!");
+        p1.SetActive(false);
+        p2.SetActive(false);
     }
 
     public void NewPlayer()
     {
         count++;
-        transform.GetChild(count + 1).gameObject.SetActive(true);
+        UpdatePlayer();
     }
 
     public void PlayerLeave()
     {
         count++;
-        transform.GetChild(count + 1).GetChild(0).gameObject.SetActive(true);
+        UpdatePlayer();
+    }
+
+    private void UpdatePlayer()
+    {
+        p1.SetActive(count > 0);
+        p2.SetActive(count > 1);
     }
 }
