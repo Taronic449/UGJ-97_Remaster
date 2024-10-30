@@ -837,7 +837,7 @@ MonoBehaviour:
 
     SPACE Bar to fire projectile
 
-    Mouse to swing
+    Mouse to use
     weapon'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85c33d056994fac469a515dab049beec, type: 2}
@@ -1951,7 +1951,7 @@ MonoBehaviour:
     Right Trigger to fire projectile
 
     Right
-    Joystick to swing weapon'
+    Joystick to use weapon'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85c33d056994fac469a515dab049beec, type: 2}
   m_sharedMaterial: {fileID: -7262163800916467132, guid: 85c33d056994fac469a515dab049beec, type: 2}
