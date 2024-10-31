@@ -19,11 +19,11 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 122562072576
-    m_Localized: Start
+    m_Localized: 'Start '
     m_Metadata:
       m_Items: []
   - m_Id: 3107027472384
-    m_Localized: Co-op
+    m_Localized: 'Co-op '
     m_Metadata:
       m_Items: []
   - m_Id: 3109023961088

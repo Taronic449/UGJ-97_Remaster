@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
@@ -14,16 +12,16 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Transform text;
     public bool brownButton;
     public bool greenButton;
-
-
+    public AnimationCurve easeInEaseOutCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    public float minWidth = 33f; // Minimum width for the roll-up effect
+    public float childOffset = 50f; // Offset from the right edge for the child rect
 
     void Awake()
     {
         myButton = GetComponent<Button>();
         text = GetComponentInChildren<TextMeshProUGUI>().transform;
-                text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, 0.4f);
 
-
+        // text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, 0.4f);
         if (myButton != null)
         {
             myButton.onClick.AddListener(OnButtonClick);
@@ -36,19 +34,19 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(brownButton)
+        if (brownButton)
             text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, -0.6f);
     }
+
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(brownButton)
+        if (brownButton)
             text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, 0.4f);
-
     }
 
     void OnButtonClick()
     {
-        if(greenButton)
+        if (greenButton)
         {
             EventSystem.current.GetComponent<InputSystemUIInputModule>().enabled = false;
             StartCoroutine(RollUp());
@@ -62,17 +60,26 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private IEnumerator RollUp()
     {
         RectTransform rect = GetComponent<RectTransform>();
-        float speed = 3;
+        RectTransform childRect = transform.GetChild(0).GetComponent<RectTransform>();
+        float duration = 1f; // Duration of the animation
+        float elapsedTime = 0f;
 
-        while(rect.sizeDelta.x > 11.125f)
+        float initialWidth = rect.sizeDelta.x;
+
+        while (elapsedTime < duration && rect.sizeDelta.x > minWidth)
         {
-            rect.sizeDelta -= new Vector2(Time.deltaTime * speed, 0);
-            transform.GetChild(0).GetComponent<RectTransform>().sizeDelta -= new Vector2(Time.deltaTime * speed, 0);
+            elapsedTime += Time.deltaTime;
+            float t = easeInEaseOutCurve.Evaluate(elapsedTime / duration);
+            float newWidth = Mathf.Lerp(initialWidth, minWidth, t);
 
+            rect.sizeDelta = new Vector2(Mathf.Max(newWidth, minWidth), rect.sizeDelta.y);
+            childRect.sizeDelta = new Vector2(Mathf.Max(newWidth - childOffset, minWidth - childOffset), childRect.sizeDelta.y);
 
-            speed += Time.deltaTime * speed * 4;
             yield return null;
         }
+
+        rect.sizeDelta = new Vector2(minWidth, rect.sizeDelta.y);
+        childRect.sizeDelta = new Vector2(minWidth - childOffset, childRect.sizeDelta.y);
 
         EventSystem.current.GetComponent<InputSystemUIInputModule>().enabled = true;
         UIManger.Instance.Press(function);

@@ -1,14 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class MusicManager : MonoBehaviour
 {
     private AudioSource audioSource;
-    private float fadeDuration = 3f;
-    private bool isFading;
+
     public static MusicManager Instance;
+
+    public AudioClip target;
+    public AudioClip curent;
+
     
     void Awake()
     {
@@ -28,60 +33,26 @@ public class MusicManager : MonoBehaviour
 
     public void PlayMusic(AudioClip clip)
     {
-        audioSource.clip = clip;
-
-        if(audioSource.isPlaying)
-        {
-            FadeOutAndPlayNext(clip);
-        }
-        else
-        {
-            audioSource.volume = 0;
-            audioSource.clip = clip;
-            audioSource.Play();
-            StartCoroutine(FadeInCoroutine());
-        }
-        
+        target = clip;
     }
 
-    public void FadeOutAndPlayNext(AudioClip clip)
+    void FixedUpdate()
     {
-        if(!isFading)
-            StartCoroutine(FadeOutCoroutine(clip));
-    }
-
-    IEnumerator FadeOutCoroutine(AudioClip clip)
-    {
-        isFading = true;
-        float startVolume = audioSource.volume;
-
-        // Gradually decrease the volume over fadeDuration seconds
-        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        if(target != curent)
         {
-            audioSource.volume = Mathf.Lerp(startVolume, 0f, t / fadeDuration);
-            yield return null;
+            audioSource.volume -= 0.01f;
+
+            if(audioSource.volume == 0)
+            {
+                curent = target;
+
+                audioSource.clip = curent;
+                audioSource.Play();
+            }
         }
-        audioSource.volume = 0f;
-        audioSource.Stop();
-
-        isFading = false;
-        
-        StartCoroutine(FadeInCoroutine());
-        
-
-    }
-
-    IEnumerator FadeInCoroutine()
-    {
-        float startVolume = 0f;
-
-        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        else if(audioSource.volume < 1)
         {
-            audioSource.volume = Mathf.Lerp(startVolume, 1f, t / fadeDuration);
-            yield return null;
+            audioSource.volume += 0.01f;
         }
-
-        audioSource.volume = 1f;
     }
-
 }
