@@ -7,18 +7,18 @@ public class SelectStage : MonoBehaviour
 {
     void Start()
     {
-        if(FindAnyObjectByType<PlayerController>() == null)
-        {
-            SceneManager.LoadScene("Main Menu");
+        // if(FindAnyObjectByType<PlayerController>() == null)
+        // {
+        //     SceneManager.LoadScene("Main Menu");
 
-            foreach (var item in FindObjectsOfType<PlayerController>())
-            {
-                Destroy(item.gameObject);
-            }
+        //     foreach (var item in FindObjectsOfType<PlayerController>())
+        //     {
+        //         Destroy(item.gameObject);
+        //     }
 
-            Time.timeScale = 1f;
-            UIManger.PAUSE = false;
-        }
+        //     Time.timeScale = 1f;
+        //     UIManger.PAUSE = false;
+        // }
     }
 
 

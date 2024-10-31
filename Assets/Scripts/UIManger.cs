@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -37,7 +38,8 @@ public class UIManger : MonoBehaviour
         Unpause,
         Death,
         SelectPlayer,
-        Controls
+        Controls,
+        SinglePlayer
 
     }
 
@@ -72,6 +74,13 @@ public class UIManger : MonoBehaviour
 
             case Button.StartGame:
                 SceneManager.LoadScene("Select Stage");
+                PAUSE = false;
+                Time.timeScale = 1f;
+            break;
+
+            case Button.SinglePlayer:
+                SceneManager.LoadScene("Select Stage");
+                FindAnyObjectByType<PlayerInputManager>().JoinPlayer(pairWithDevice: default);
                 PAUSE = false;
                 Time.timeScale = 1f;
             break;

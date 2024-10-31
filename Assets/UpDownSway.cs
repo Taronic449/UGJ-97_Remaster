@@ -1,18 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UpDownSway : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float swayDistance = 1f; // Distance to sway
+    public float swaySpeed = 1f; // Speed of swaying
+    public bool swayUpDown = true; // Toggle between up-down and right-left
+
+    private Vector3 startPos;
+
     void Start()
     {
-        
+        startPos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float sway = Mathf.Sin(Time.time * swaySpeed) * swayDistance;
+        Vector3 swayDirection = swayUpDown ? Vector3.up : Vector3.right;
+
+        transform.position = startPos + swayDirection * sway;
     }
 }

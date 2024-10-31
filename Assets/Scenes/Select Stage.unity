@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 168674145}
   - component: {fileID: 168674147}
   - component: {fileID: 168674146}
+  - component: {fileID: 168674148}
   m_Layer: 5
   m_Name: Dojo Sign
   m_TagString: Untagged
@@ -315,6 +316,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168674144}
   m_CullTransparentMesh: 1
+--- !u!114 &168674148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168674144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0dfe5fb18622cc40bef5ec580a58dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayDistance: 3
+  swaySpeed: 8
+  swayUpDown: 1
 --- !u!1 &252411417
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fda0ba0490ff73428f7c453e63072fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  curent: {fileID: 0}
 --- !u!82 &252411420
 AudioSource:
   m_ObjectHideFlags: 0
@@ -782,6 +800,7 @@ GameObject:
   - component: {fileID: 774156883}
   - component: {fileID: 774156882}
   - component: {fileID: 774156881}
+  - component: {fileID: 774156884}
   m_Layer: 5
   m_Name: Volatile Volcano Button
   m_TagString: Untagged
@@ -807,7 +826,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 500, y: -265}
-  m_SizeDelta: {x: 28, y: 15}
+  m_SizeDelta: {x: 38, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &774156881
 MonoBehaviour:
@@ -877,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: a656a3a903fb93447934d2c168c807ef, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -903,6 +922,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774156879}
   m_CullTransparentMesh: 1
+--- !u!114 &774156884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774156879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3ad0aef422cb40b7a62a00ee8f1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 1.1
+  scaleDuration: 0.1
+  audioSource: {fileID: 0}
+  effectType: 0
+  hoverAudio: 0
+  originalText: 
 --- !u!1 &930200176
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +952,7 @@ GameObject:
   - component: {fileID: 930200180}
   - component: {fileID: 930200179}
   - component: {fileID: 930200178}
+  - component: {fileID: 930200181}
   m_Layer: 5
   m_Name: Danuja Dojo Button
   m_TagString: Untagged
@@ -940,7 +978,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -265}
-  m_SizeDelta: {x: 28, y: 15}
+  m_SizeDelta: {x: 38, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930200178
 MonoBehaviour:
@@ -1010,7 +1048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: a656a3a903fb93447934d2c168c807ef, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1036,6 +1074,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930200176}
   m_CullTransparentMesh: 1
+--- !u!114 &930200181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930200176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3ad0aef422cb40b7a62a00ee8f1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 1.1
+  scaleDuration: 0.1
+  audioSource: {fileID: 0}
+  effectType: 0
+  hoverAudio: 0
+  originalText: 
 --- !u!1 &1065222437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1340,7 @@ GameObject:
   - component: {fileID: 1181029049}
   - component: {fileID: 1181029048}
   - component: {fileID: 1181029047}
+  - component: {fileID: 1181029050}
   m_Layer: 5
   m_Name: Gaily Greens Button
   m_TagString: Untagged
@@ -1309,7 +1366,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -500, y: -265}
-  m_SizeDelta: {x: 28, y: 15}
+  m_SizeDelta: {x: 38, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181029047
 MonoBehaviour:
@@ -1379,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: a656a3a903fb93447934d2c168c807ef, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1405,6 +1462,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181029045}
   m_CullTransparentMesh: 1
+--- !u!114 &1181029050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181029045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f3ad0aef422cb40b7a62a00ee8f1a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 1.1
+  scaleDuration: 0.1
+  audioSource: {fileID: 0}
+  effectType: 0
+  hoverAudio: 0
+  originalText: 
 --- !u!1 &1386982329
 GameObject:
   m_ObjectHideFlags: 0
