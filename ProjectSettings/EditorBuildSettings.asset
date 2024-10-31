@@ -29,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Select Stage.unity
     guid: a3cd24305b9ad284d909776c7c99e39b
+  - enabled: 1
+    path: Assets/Scenes/Stages/Danuja Dojo.unity
+    guid: 99380becda3f9934585297ccb34b2d37
+  - enabled: 1
+    path: Assets/Scenes/Stages/Gaily Greens.unity
+    guid: d369627204a2dc149a03b2b5838f5c7b
+  - enabled: 1
+    path: Assets/Scenes/Stages/Volatile Volcano.unity
+    guid: dc4eb6f0717ef89479857e9bcde9a087
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f11494bd0d7aaf640ad0f831a6a019f8, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: a056fa88973cc6e4aba240f736218212, type: 2}

@@ -71,7 +71,7 @@ public class UIManger : MonoBehaviour
             break;
 
             case Button.StartGame:
-                SceneManager.LoadScene("Battlefield");
+                SceneManager.LoadScene("Select Stage");
                 PAUSE = false;
                 Time.timeScale = 1f;
             break;

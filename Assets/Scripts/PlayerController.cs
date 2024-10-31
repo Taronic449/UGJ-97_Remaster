@@ -35,10 +35,10 @@ public class PlayerController : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
-    void Start()
-    {
-        HealthBar.Instance.setHealth(health.health);
-    }
+    // void Start()
+    // {
+    //     HealthBar.Instance.setHealth(health.health);
+    // }
 
     void OnMove(InputValue inputValue)
     {
