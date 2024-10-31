@@ -93,173 +93,199 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Yori_Walk1
+      name: Yori Walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 481f6baeeb7120946a71c57af2ba51e1
-      internalID: 2050226939
+      spriteID: 3269c6132e087144e8b1115c32fcb4f1
+      internalID: -770446592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk2
+      name: Yori Walk_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6983c8043b4afc49879d6bd23720b37
-      internalID: 90585887
+      spriteID: e4334d61e40d9154c90752f5f7f63505
+      internalID: 810238091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk3
+      name: Yori Walk_2
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae5fc1f2eb46584780fa5efb9da7611
-      internalID: 441370966
+      spriteID: e11e6001a66120a48a8fc0256003210d
+      internalID: -1081399230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk4
+      name: Yori Walk_3
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa6d1b405e246f942990ae98569ae57f
-      internalID: -1692459760
+      spriteID: 6747322df07c86e42a0f7dff77718156
+      internalID: -235085468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk5
+      name: Yori Walk_4
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faa83031eeb5fbf42ac1fdd03c8ec41a
-      internalID: 311785932
+      spriteID: 2b24cc617a43f4d4aa86cc7761576347
+      internalID: 128232209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk6
+      name: Yori Walk_5
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4b0cc5faa7470b49a5c3be5fa5f2009
-      internalID: 1266796871
+      spriteID: 843aac85220bac34aba22260dc637802
+      internalID: 862152085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk7
+      name: Yori Walk_6
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab25e1cc0bd5814fb311b407f4ad321
-      internalID: -742161211
+      spriteID: f0863635b35169f4f828750d62123313
+      internalID: 1655959821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Walk8
+      name: Yori Walk_7
       rect:
         serializedVersion: 2
         x: 280
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c0337fd9f7ea54dbb214c129b187d9
-      internalID: 1589638856
+      spriteID: 2bb767ee700d38e449f4b3d3bb064cb7
+      internalID: -165877342
       vertices: []
       indices: 
       edges: []
@@ -275,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Yori_Walk1: 2050226939
-      Yori_Walk2: 90585887
-      Yori_Walk3: 441370966
-      Yori_Walk4: -1692459760
-      Yori_Walk5: 311785932
-      Yori_Walk6: 1266796871
-      Yori_Walk7: -742161211
-      Yori_Walk8: 1589638856
+      Yori Walk_0: -770446592
+      Yori Walk_1: 810238091
+      Yori Walk_2: -1081399230
+      Yori Walk_3: -235085468
+      Yori Walk_4: 128232209
+      Yori Walk_5: 862152085
+      Yori Walk_6: 1655959821
+      Yori Walk_7: -165877342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

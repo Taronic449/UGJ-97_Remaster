@@ -93,236 +93,262 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Yori_Idle1
+      name: Yori Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ffc63277ade0ae46a3eaa7a8c9f5112
-      internalID: -606186538
+      spriteID: 3eee72861d360c24fb31a303a961fe72
+      internalID: -197226505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle2
+      name: Yori Idle_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c78d5ede94b2cc408ab5ded8260239d
-      internalID: 1586182072
+      spriteID: 04818b6eeb54c7e459705b90f3f9995c
+      internalID: -2039200408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle3
+      name: Yori Idle_2
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e35b599d0cad554380356114253eab1
-      internalID: -368493541
+      spriteID: 0b9d97243a479f741989ee73b53fac30
+      internalID: 397990069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle4
+      name: Yori Idle_3
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2913f1ade242d45b24cabd6eede7a6
-      internalID: -1891847081
+      spriteID: 5dfa1a9833ff50743a5e32a65f9b8914
+      internalID: -1140529168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle5
+      name: Yori Idle_4
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dfbce4168555f2478b2d5d1471d99cf
-      internalID: -157534252
+      spriteID: 5cfebdf716a0e18429784511020003c7
+      internalID: 1876518250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle6
+      name: Yori Idle_5
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c4a2964e99d5a42a8e7f4a21cdec96
-      internalID: 2040277143
+      spriteID: b58e961e25d7eab4e9aeeb08c721afdc
+      internalID: 462258807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle7
+      name: Yori Idle_6
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cf70218b73007042a8e986707c05920
-      internalID: -833013088
+      spriteID: 74a7c7f886d5a084390e42ca3bc8025a
+      internalID: 860951111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle8
+      name: Yori Idle_7
       rect:
         serializedVersion: 2
         x: 280
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049dfdb8f6ba98847bf8311f866810e8
-      internalID: 817636396
+      spriteID: 1eb7159e89d1f0140a1e37c1adc42704
+      internalID: 537457351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle9
+      name: Yori Idle_8
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18be0dab92c413747b4ffc5742320f60
-      internalID: -1834708829
+      spriteID: 40a85415ee895be44a146bdfc7c2ad9d
+      internalID: -1643705022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle10
+      name: Yori Idle_9
       rect:
         serializedVersion: 2
         x: 360
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 218cc4d4f17b1734ea77e51883295b78
-      internalID: 285509995
+      spriteID: 2b72cfe893c9b0e438542820f980203c
+      internalID: -763427813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Yori_Idle11
+      name: Yori Idle_10
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01fa3d62e6c4f294e81a1387ac1989d5
-      internalID: 1644978114
+      spriteID: 3132dde98b48eb144b5cb0b75e118c49
+      internalID: -2027012562
       vertices: []
       indices: 
       edges: []
@@ -338,17 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Yori_Idle1: -606186538
-      Yori_Idle10: 285509995
-      Yori_Idle11: 1644978114
-      Yori_Idle2: 1586182072
-      Yori_Idle3: -368493541
-      Yori_Idle4: -1891847081
-      Yori_Idle5: -157534252
-      Yori_Idle6: 2040277143
-      Yori_Idle7: -833013088
-      Yori_Idle8: 817636396
-      Yori_Idle9: -1834708829
+      Yori Idle_0: -197226505
+      Yori Idle_1: -2039200408
+      Yori Idle_10: -2027012562
+      Yori Idle_2: 397990069
+      Yori Idle_3: -1140529168
+      Yori Idle_4: 1876518250
+      Yori Idle_5: 462258807
+      Yori Idle_6: 860951111
+      Yori Idle_7: 537457351
+      Yori Idle_8: -1643705022
+      Yori Idle_9: -763427813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

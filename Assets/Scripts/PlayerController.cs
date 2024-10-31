@@ -1,6 +1,7 @@
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 using static PowerUp;
 
 public class PlayerController : MonoBehaviour
@@ -19,8 +20,11 @@ public class PlayerController : MonoBehaviour
     public GameObject shurikenProjectile;
     public Transform projectilePoint;
     private Animator ani;
+    public Animator swordAni;
+
     private float stun;
     private float colldown;
+    public Transform rotPivot;
 
 
     [Header("Debug")]
@@ -33,6 +37,7 @@ public class PlayerController : MonoBehaviour
         spriteR = GetComponent<SpriteRenderer>();
         ani = GetComponent<Animator>();
 
+
         DontDestroyOnLoad(gameObject);
     }
     // void Start()
@@ -43,13 +48,14 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue inputValue)
     {
         moveInput = inputValue.Get<Vector2>();
+
     }
 
     void OnFire(InputValue inputValue)
     {
-        stun = 0.25f;
-        ani.SetTrigger("attack");
+        swordAni.Play("attac");
     }
+
     void OnThrow(InputValue inputValue)
     {
         if(colldown < 0)
@@ -72,17 +78,19 @@ public class PlayerController : MonoBehaviour
 
         targetVelocity = moveInput * moveSpeed;
 
-        if (rb.velocity.magnitude > 0.01f)
-        {
-            if (moveInput.x < 0)
-            {
-                transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
-            }
-            else if (moveInput.x > 0)
-            {
-                transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-            }
-        }
+        spriteR.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x;
+
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        mousePosition.z = 0;
+
+        Vector3 direction = (mousePosition - transform.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        rotPivot.rotation = Quaternion.Euler(0, 0, angle + 180);
+
+        rotPivot.GetComponent<SortingGroup>().sortingOrder = angle > 50 || angle < -95 ? 0 : 1;
 
         colldown -= Time.deltaTime;
 

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +11,8 @@ public class Enemy : MonoBehaviour
     private int force = 520;
     public float timer;
 
+    public Vector2 startoff;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,12 +20,13 @@ public class Enemy : MonoBehaviour
         ani = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
+        startoff = Random.insideUnitCircle * 2;
     }
 
 
     void FixedUpdate()
     {
-        GetComponent<NavMeshAgent>().SetDestination(player.transform.position);
+        GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff);
 
         sprite.flipX = player.position.x - rb.position.x > 0;
 
