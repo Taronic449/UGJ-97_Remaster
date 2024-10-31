@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +23,16 @@ public class SelectStage : MonoBehaviour
 
     public void GailyGreens()
     {
+        
+        int n = 0;
+
+        foreach (var item in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
+        {
+            transform.position = new Vector2(n*2,0);
+
+            n++;
+        }
+
         SceneManager.LoadScene("Gaily Greens");
     }
 

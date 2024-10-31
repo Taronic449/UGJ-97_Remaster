@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player").transform;
+        player = FindAnyObjectByType<PlayerController>().transform;
         ani = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
@@ -23,9 +24,7 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 direction = ((Vector2)player.position - rb.position).normalized;
-        rb.AddForce(direction * force * Time.deltaTime);
-        rb.velocity = Vector2.ClampMagnitude(rb.velocity, 1.2f);
+        GetComponent<NavMeshAgent>().SetDestination(player.transform.position);
 
         sprite.flipX = player.position.x - rb.position.x > 0;
 
