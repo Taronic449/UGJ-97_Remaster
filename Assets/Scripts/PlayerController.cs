@@ -37,13 +37,21 @@ public class PlayerController : MonoBehaviour
         spriteR = GetComponent<SpriteRenderer>();
         ani = GetComponent<Animator>();
 
+        transform.position = new Vector2(10000,10000);
 
         DontDestroyOnLoad(gameObject);
+
+        PlayerManager.Instance.players.Add(this);
     }
     // void Start()
     // {
     //     HealthBar.Instance.setHealth(health.health);
     // }
+
+    void OnDestroy()
+    {
+        PlayerManager.Instance.players.Remove(this);
+    }
 
     void OnMove(InputValue inputValue)
     {

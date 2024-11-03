@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         ani = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
 
-        startoff = Random.insideUnitCircle * 2;
+        startoff = Random.insideUnitCircle * 1;
     }
 
 

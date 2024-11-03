@@ -6,30 +6,28 @@ public class SelectStage : MonoBehaviour
 {
     void Start()
     {
-        // if(FindAnyObjectByType<PlayerController>() == null)
-        // {
-        //     SceneManager.LoadScene("Main Menu");
+        if(FindAnyObjectByType<PlayerController>() == null)
+        {
+            SceneManager.LoadScene("Main Menu");
 
-        //     foreach (var item in FindObjectsOfType<PlayerController>())
-        //     {
-        //         Destroy(item.gameObject);
-        //     }
+            foreach (var item in FindObjectsOfType<PlayerController>())
+            {
+                Destroy(item.gameObject);
+            }
 
-        //     Time.timeScale = 1f;
-        //     UIManger.PAUSE = false;
-        // }
+            Time.timeScale = 1f;
+            UIManger.PAUSE = false;
+        }
     }
 
 
     public void GailyGreens()
     {
-        
         int n = 0;
 
-        foreach (var item in FindObjectsByType<PlayerController>(FindObjectsSortMode.None))
+        foreach (PlayerController item in PlayerManager.Instance.players)
         {
-            transform.position = new Vector2(n*2,0);
-
+            item.transform.position = new Vector2(n*2,0);
             n++;
         }
 
