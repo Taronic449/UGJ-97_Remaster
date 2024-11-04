@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &68364830
 Rigidbody2D:
@@ -416,6 +417,7 @@ MonoBehaviour:
         m_CallState: 2
   damageObj: {fileID: 2858335105287347822, guid: 407a6df023a6fd9438e60d01ce16442d, type: 3}
   shield: 0
+  shieldT: {fileID: 0}
 --- !u!114 &74530365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +433,12 @@ MonoBehaviour:
   moveSpeed: 5
   smoothTime: 0.08
   damage: 0
+  fish: 0
+  fishProjectile: {fileID: 0}
+  shurikenProjectile: {fileID: 0}
+  projectilePoint: {fileID: 0}
+  swordAni: {fileID: 0}
+  rotPivot: {fileID: 0}
   moveInput: {x: 0, y: 0}
 --- !u!61 &74530366
 BoxCollider2D:
@@ -789,6 +797,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fda0ba0490ff73428f7c453e63072fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  curent: {fileID: 0}
 --- !u!82 &173533138
 AudioSource:
   m_ObjectHideFlags: 0
@@ -918,6 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &173777065
 Rigidbody2D:
@@ -1103,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &262462477
 Rigidbody2D:
@@ -1288,6 +1300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &268918326
 Rigidbody2D:
@@ -1473,6 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &315528038
 Rigidbody2D:
@@ -1792,6 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &404906000
 Rigidbody2D:
@@ -2065,6 +2080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &498081256
 Rigidbody2D:
@@ -2348,6 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &599098001
 Rigidbody2D:
@@ -2811,6 +2828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &725842124
 Rigidbody2D:
@@ -3130,6 +3148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &873174795
 Rigidbody2D:
@@ -3315,6 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &885550525
 Rigidbody2D:
@@ -3567,6 +3587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1151143327
 Rigidbody2D:
@@ -3886,6 +3907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1376657340
 Rigidbody2D:
@@ -4180,6 +4202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1393381805
 Rigidbody2D:
@@ -4365,6 +4388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1422019476
 Rigidbody2D:
@@ -4550,6 +4574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1444798546
 Rigidbody2D:
@@ -4802,6 +4827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1574939004
 Rigidbody2D:
@@ -10280,6 +10306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &1933916512
 Rigidbody2D:
@@ -10532,6 +10559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &2031687166
 Rigidbody2D:
@@ -10784,6 +10812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e288309cfeaa2248876d7ec209fc5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   effect: 0
 --- !u!50 &2123742015
 Rigidbody2D:
