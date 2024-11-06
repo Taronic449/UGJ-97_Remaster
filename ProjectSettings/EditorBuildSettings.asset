@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 3a5e62f37566e094c96480db7a0abce7
   - enabled: 1
-    path: Assets/Scenes/Match Over.unity
+    path: Assets/Scenes/Single Match Over.unity
     guid: eca8efd771ebc9b44bfd7234ce154b5e
   - enabled: 1
     path: Assets/Scenes/Options.unity
@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stages/Volatile Volcano.unity
     guid: dc4eb6f0717ef89479857e9bcde9a087
+  - enabled: 1
+    path: Assets/Scenes/Coop Match Over.unity
+    guid: 9372c93507d0ff042adb6a71cf941183
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f11494bd0d7aaf640ad0f831a6a019f8, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: a056fa88973cc6e4aba240f736218212, type: 2}
