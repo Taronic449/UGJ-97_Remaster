@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private Animator ani;
     private SpriteRenderer sprite;
-    private int force = 520;
     public float timer;
+    private NavMeshAgent agent;
 
     public Vector2 startoff;
 
@@ -35,7 +35,8 @@ public class Enemy : MonoBehaviour
             timer = 3;
             rb.velocity = Vector2.zero;
             ani.SetBool("attack", true);
-            force = 0;
+
+            agent.isStopped = true;
         }
 
         timer -= Time.deltaTime;
@@ -54,6 +55,6 @@ public class Enemy : MonoBehaviour
     public void resetForce()
     {
         ani.SetBool("attack", false);
-        force = 520;
+        agent.isStopped = false;
     }
 }

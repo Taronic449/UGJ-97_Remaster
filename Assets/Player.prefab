@@ -189,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923409267635672877}
   - component: {fileID: 810028020835900568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Yori Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5603,7 +5603,7 @@ GameObject:
   - component: {fileID: 8796527641474657155}
   - component: {fileID: 2785134747101338684}
   - component: {fileID: 3668079042395511785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5788,7 +5788,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_MaskInteraction: 0
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
   m_ApplyActiveColorSpace: 1
 --- !u!1 &6881658736854855166
 GameObject:
@@ -5995,7 +5995,7 @@ GameObject:
   - component: {fileID: 8216551264745649573}
   - component: {fileID: 2482537798044297373}
   - component: {fileID: 2099684238365392196}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6048,7 +6048,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 4.2284746, y: 2.268397}

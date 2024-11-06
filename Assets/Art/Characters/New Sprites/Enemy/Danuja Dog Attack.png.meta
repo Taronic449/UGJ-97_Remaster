@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 41
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,89 +93,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dog_Attack1
+      name: Danuja Dog Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 82
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17972eb374fac9e4c9559c8e5a3b1f64
-      internalID: -1444114061
+      spriteID: dcdb46aebd0c74349af27868fafdddae
+      internalID: -865864216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Attack2
+      name: Danuja Dog Attack_1
       rect:
         serializedVersion: 2
         x: 82
         y: 0
         width: 82
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de9479393e8ac194c930ce9e57ff070d
-      internalID: -239759469
+      spriteID: 637eb8f21d365094dbbe1fddad5bcee1
+      internalID: 1713016540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Attack3
+      name: Danuja Dog Attack_2
       rect:
         serializedVersion: 2
         x: 164
         y: 0
         width: 82
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9d9d09e8df4214f951e31d38995cc1
-      internalID: -665336152
+      spriteID: 03cc3df078ab02b479fb6881600fcbf0
+      internalID: 446219754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Attack4
+      name: Danuja Dog Attack_3
       rect:
         serializedVersion: 2
         x: 246
         y: 0
         width: 82
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6f3f829a4975db4ca76d9b09505ccd2
-      internalID: 295142669
+      spriteID: e59a84489d22a7849b3bbe13e10048c1
+      internalID: 1069740732
       vertices: []
       indices: 
       edges: []
@@ -191,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dog_Attack1: -1444114061
-      Dog_Attack2: -239759469
-      Dog_Attack3: -665336152
-      Dog_Attack4: 295142669
+      Danuja Dog Attack_0: -865864216
+      Danuja Dog Attack_1: 1713016540
+      Danuja Dog Attack_2: 446219754
+      Danuja Dog Attack_3: 1069740732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

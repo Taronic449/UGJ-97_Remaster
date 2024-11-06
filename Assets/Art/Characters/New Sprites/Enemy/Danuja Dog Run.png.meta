@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,173 +93,199 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dog_Run1
+      name: Danuja Dog Run_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68daeaff26ea75649b835472c9b91f7a
-      internalID: -433181603
+      spriteID: 2528fd4e194a26d478029c8da3f94a3c
+      internalID: -929197278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run2
+      name: Danuja Dog Run_1
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7920af6552c90944ac508be6ffc580d
-      internalID: -1623035749
+      spriteID: 6b3be56b1e86f4a41a1f3c9b0d5de283
+      internalID: -1242151398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run3
+      name: Danuja Dog Run_2
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e6097335b7dd464fb6b0549019f3298
-      internalID: 2090654821
+      spriteID: bb5829a57757b5b4ab23a74dc92e0632
+      internalID: -554704714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run4
+      name: Danuja Dog Run_3
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2107a9289de8adb4096221904aa9bf56
-      internalID: -1400482305
+      spriteID: cb991139ac317c645bcbfae0e41c1cbc
+      internalID: -535869647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run5
+      name: Danuja Dog Run_4
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ef9c86f9f537a64db91439359f15c9c
-      internalID: 1928832433
+      spriteID: defe6f231fa733343a4690934239b818
+      internalID: -842605349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run6
+      name: Danuja Dog Run_5
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c9853c4d93539e4c9bbfb18f2709eb0
-      internalID: 223953541
+      spriteID: ab0125bc41ac40441968521b73cd6683
+      internalID: 1901435396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run7
+      name: Danuja Dog Run_6
       rect:
         serializedVersion: 2
         x: 480
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb7fa9df5a157946b1916306613c6d4
-      internalID: -928186631
+      spriteID: fd9f55ff0898fd844b545101a227c7c3
+      internalID: -1939732339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dog_Run8
+      name: Danuja Dog Run_7
       rect:
         serializedVersion: 2
         x: 560
         y: 0
         width: 80
         height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9979c8f4da35324fb0f23fee91f4449
-      internalID: 238255598
+      spriteID: 4a8b9ce1fdd63734e91cebe57ab6b338
+      internalID: -201380102
       vertices: []
       indices: 
       edges: []
@@ -275,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dog_Run1: -433181603
-      Dog_Run2: -1623035749
-      Dog_Run3: 2090654821
-      Dog_Run4: -1400482305
-      Dog_Run5: 1928832433
-      Dog_Run6: 223953541
-      Dog_Run7: -928186631
-      Dog_Run8: 238255598
+      Danuja Dog Run_0: -929197278
+      Danuja Dog Run_1: -1242151398
+      Danuja Dog Run_2: -554704714
+      Danuja Dog Run_3: -535869647
+      Danuja Dog Run_4: -842605349
+      Danuja Dog Run_5: 1901435396
+      Danuja Dog Run_6: -1939732339
+      Danuja Dog Run_7: -201380102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
