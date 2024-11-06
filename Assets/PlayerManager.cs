@@ -20,4 +20,16 @@ public class PlayerManager : MonoBehaviour
             Instance = this;
         }
     }
+
+    public void InitializeAll()
+    {
+        Debug.Log(1);
+        Debug.Log(players);
+
+
+        foreach (PlayerController item in players)
+        {
+            item.Initialize();
+        }
+    }
 }

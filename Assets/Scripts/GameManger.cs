@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine;
 public class GameManger : MonoBehaviour
 {
     public static GameManger Instance;
+    public CinemachineVirtualCamera cam;
     public TextMeshProUGUI scoreText;
     public int score;
 
@@ -15,13 +17,20 @@ public class GameManger : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+
+            PlayerManager.Instance.InitializeAll();
+
         }
         else
         {
             Destroy(Instance.gameObject);
             Instance = this;
+
+            PlayerManager.Instance.InitializeAll();
         }
     }
+
+
 
     public void addScore(ushort amount)
     {

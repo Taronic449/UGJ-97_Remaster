@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private float colldown;
     public Transform rotPivot;
 
+    private CinemachineVirtualCamera cam;
+
 
     [Header("Debug")]
     public Vector2 moveInput;
@@ -38,15 +40,25 @@ public class PlayerController : MonoBehaviour
         ani = GetComponent<Animator>();
 
         transform.position = new Vector2(10000,10000);
+        PlayerManager.Instance.players.Add(this);
 
         DontDestroyOnLoad(gameObject);
-
-        PlayerManager.Instance.players.Add(this);
     }
-    // void Start()
-    // {
-    //     HealthBar.Instance.setHealth(health.health);
-    // }
+
+    public void Initialize()
+    {
+
+        // HealthBar.Instance.setHealth(health.health);
+        
+        cam = GameManger.Instance.cam;
+        cam.Follow = transform;
+    }
+    
+    
+    void Start()
+    {
+ 
+    }
 
     void OnDestroy()
     {
