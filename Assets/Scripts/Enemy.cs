@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody2D rb;
     private Transform player;
     private Animator ani;
     private SpriteRenderer sprite;
@@ -15,10 +14,10 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         player = FindAnyObjectByType<PlayerController>().transform;
         ani = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        agent = GetComponent<NavMeshAgent>();
 
         startoff = Random.insideUnitCircle * 1;
     }
@@ -28,12 +27,11 @@ public class Enemy : MonoBehaviour
     {
         GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff);
 
-        sprite.flipX = player.position.x - rb.position.x > 0;
+        sprite.flipX = player.position.x - transform.position.x > 0;
 
-        if(((Vector2)player.position - rb.position).magnitude < 1.6f && !ani.GetBool("attack") && timer < 0)
+        if((player.position - transform.position).magnitude < 1.6f && !ani.GetBool("attack") && timer < 0)
         {
             timer = 3;
-            rb.velocity = Vector2.zero;
             ani.SetBool("attack", true);
 
             agent.isStopped = true;
