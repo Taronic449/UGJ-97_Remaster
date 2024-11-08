@@ -29,22 +29,18 @@ public class UIManger : MonoBehaviour
     
     public enum Button
     {
-        MainMenu,
-        CloseGame,
-        StartGame,
-        Credits,
-        Settings,
-        Pause,
-        Unpause,
-        Death,
-        SelectPlayer,
-        Controls,
-        SinglePlayer
+        MainMenu = 1,
+        CloseGame = 2,
+        StartGame = 3,
+        Pause = 6,
+        Unpause = 7,
+        Death = 8,
+        SinglePlayer = 11,
+        LoadScene = 12
 
     }
 
-
-    public void Press(Button function)
+    public void Press(Button function, string? scenename)
     {
         switch (function)
         {
@@ -64,12 +60,8 @@ public class UIManger : MonoBehaviour
                 Application.Quit();
             break;
 
-            case Button.SelectPlayer:
-                SceneManager.LoadScene("Select Player");
-            break;
-
-            case Button.Controls:
-                SceneManager.LoadScene("Controls");
+            case Button.LoadScene:
+                SceneManager.LoadScene(scenename);
             break;
 
             case Button.StartGame:
@@ -83,14 +75,6 @@ public class UIManger : MonoBehaviour
                 FindAnyObjectByType<PlayerInputManager>().JoinPlayer(pairWithDevice: default);
                 PAUSE = false;
                 Time.timeScale = 1f;
-            break;
-
-            case Button.Credits:
-                SceneManager.LoadScene("Credits");
-            break;
-
-            case Button.Settings:
-                SceneManager.LoadScene("Options");
             break;
 
             case Button.Pause:

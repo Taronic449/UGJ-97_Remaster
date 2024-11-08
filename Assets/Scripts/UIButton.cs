@@ -11,6 +11,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Button myButton;
     private Transform text;
     public bool brownButton;
+    public string SceneNameOptinal;
     public bool greenButton;
     public AnimationCurve easeInEaseOutCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     public float minWidth = 33f; // Minimum width for the roll-up effect
@@ -53,7 +54,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
         else
         {
-            UIManger.Instance.Press(function);
+            UIManger.Instance.Press(function,SceneNameOptinal);
         }
     }
 
@@ -82,6 +83,6 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         childRect.sizeDelta = new Vector2(minWidth - childOffset, childRect.sizeDelta.y);
 
         EventSystem.current.GetComponent<InputSystemUIInputModule>().enabled = true;
-        UIManger.Instance.Press(function);
+        UIManger.Instance.Press(function,SceneNameOptinal);
     }
 }

@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 57486211}
   - component: {fileID: 57486210}
   - component: {fileID: 57486209}
-  - component: {fileID: 57486213}
   m_Layer: 5
   m_Name: Menu Canvas
   m_TagString: Untagged
@@ -227,21 +226,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &57486213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57486208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 687022560ef1eae409466869702f3924, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  p1: {fileID: 0}
-  p2: {fileID: 0}
-  count: 0
 --- !u!1 &168674144
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +527,7 @@ MonoBehaviour:
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 57486213}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SelectPlayer, Assembly-CSharp
         m_MethodName: NewPlayer
         m_Mode: 1
@@ -558,7 +542,7 @@ MonoBehaviour:
   m_PlayerLeftEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 57486213}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SelectPlayer, Assembly-CSharp
         m_MethodName: PlayerLeave
         m_Mode: 1
@@ -2165,8 +2149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 0
+  function: 1
   brownButton: 1
+  SceneNameOptinal: 
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2

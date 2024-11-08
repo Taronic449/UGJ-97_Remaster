@@ -175,8 +175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 4
+  function: 12
   brownButton: 1
+  SceneNameOptinal: Options
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -1412,8 +1413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 9
+  function: 12
   brownButton: 1
+  SceneNameOptinal: Tutorial
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -1596,6 +1598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   function: 8
   brownButton: 0
+  SceneNameOptinal: 
   greenButton: 1
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -2169,8 +2172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 3
+  function: 12
   brownButton: 1
+  SceneNameOptinal: Credits
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -2966,8 +2970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 1
+  function: 2
   brownButton: 1
+  SceneNameOptinal: 
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -3274,6 +3279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   function: 10
   brownButton: 0
+  SceneNameOptinal: 
   greenButton: 1
   easeInEaseOutCurve:
     serializedVersion: 2

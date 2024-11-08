@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
         {
             alive = false;
             GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(3);
-            UIManger.Instance.Press(UIManger.Button.Death);
+            UIManger.Instance.Press(UIManger.Button.Death,null);
         }
         
     }

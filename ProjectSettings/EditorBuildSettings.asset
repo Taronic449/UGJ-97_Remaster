@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: e7f54bf7087ed3340a9e33dbe453ab41
   - enabled: 1
-    path: Assets/Scenes/Tutorial Scenes/Controls.unity
-    guid: c3c4433495417b84d88f9089eec44114
-  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 3a5e62f37566e094c96480db7a0abce7
   - enabled: 1
@@ -41,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Coop Match Over.unity
     guid: 9372c93507d0ff042adb6a71cf941183
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Scenes/Tutorial.unity
+    guid: d1d47529d7677844995ea34dcda59993
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f11494bd0d7aaf640ad0f831a6a019f8, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: a056fa88973cc6e4aba240f736218212, type: 2}
