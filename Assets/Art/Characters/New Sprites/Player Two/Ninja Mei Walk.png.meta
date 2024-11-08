@@ -93,173 +93,199 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mei_Walk1
+      name: Ninja Mei Walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8d5016ce8257e54f9d32ae5c292ca8d
-      internalID: -737245429
+      spriteID: 15bc1acca788ad148b4a77ae0fb5afde
+      internalID: 1495067351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk2
+      name: Ninja Mei Walk_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fc9c724cf0679b44882b60057c82e4c
-      internalID: 1136143164
+      spriteID: 6c2822d2f80138d4bbe376fdd9c3e5c9
+      internalID: 1285845411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk3
+      name: Ninja Mei Walk_2
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecf495901036d5941a4c437051cc3deb
-      internalID: 42410551
+      spriteID: 1fa4ca07a738d974395a15c45487cc11
+      internalID: 1295260973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk4
+      name: Ninja Mei Walk_3
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e364b92342ad06044aefbe9a3573efb5
-      internalID: 1274092789
+      spriteID: 8abea60aa6f6ebc4d829b5688c28f44b
+      internalID: 1012692419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk5
+      name: Ninja Mei Walk_4
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 115388cc8540c8c468f247230a0c91ec
-      internalID: -96104517
+      spriteID: 426b8f9c4e2e7f34d8076bd08fe5f1d7
+      internalID: -799205471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk6
+      name: Ninja Mei Walk_5
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e46fd2e4346924c41b6a6a4f5493f50b
-      internalID: -940835003
+      spriteID: 9425f8db220e003469b6e0a055a45fb8
+      internalID: -1543005748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk7
+      name: Ninja Mei Walk_6
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c217a93d608894b4b95c04fb66296d64
-      internalID: 1895867315
+      spriteID: ebce1bfcf6e997c40a25a2c3abc8b96d
+      internalID: 1751675179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Walk8
+      name: Ninja Mei Walk_7
       rect:
         serializedVersion: 2
         x: 280
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d141c293e8e302e48946bf8d15db2fdb
-      internalID: -912842202
+      spriteID: 7c393223876e0294a83d2668ed0f290c
+      internalID: 944135287
       vertices: []
       indices: 
       edges: []
@@ -275,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mei_Walk1: -737245429
-      Mei_Walk2: 1136143164
-      Mei_Walk3: 42410551
-      Mei_Walk4: 1274092789
-      Mei_Walk5: -96104517
-      Mei_Walk6: -940835003
-      Mei_Walk7: 1895867315
-      Mei_Walk8: -912842202
+      Ninja Mei Walk_0: 1495067351
+      Ninja Mei Walk_1: 1285845411
+      Ninja Mei Walk_2: 1295260973
+      Ninja Mei Walk_3: 1012692419
+      Ninja Mei Walk_4: -799205471
+      Ninja Mei Walk_5: -1543005748
+      Ninja Mei Walk_6: 1751675179
+      Ninja Mei Walk_7: 944135287
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

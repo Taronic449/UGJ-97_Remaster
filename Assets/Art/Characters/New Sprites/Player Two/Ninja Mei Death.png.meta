@@ -93,131 +93,157 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mei_Death1
+      name: Ninja Mei Death_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d3a25e0fef424744bbfe116b9365421
-      internalID: -971002556
+      spriteID: b25023aa7c0fedb4d97aa8e3999bdc55
+      internalID: 434349256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Death2
+      name: Ninja Mei Death_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8349585f198bf4541a7b69baea460f5d
-      internalID: -597330646
+      spriteID: be2d0401b27bda940bc15ad826d1343b
+      internalID: 263629974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Death3
+      name: Ninja Mei Death_2
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 40
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd504fd4c105b6640929910fe3ffe441
-      internalID: 1534452318
+      spriteID: 186a8926cc11f744f90270fe9a9de6e0
+      internalID: -572995069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Death4
+      name: Ninja Mei Death_3
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 40
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96fdac0297eecbe41b21105dcea4bc4a
-      internalID: -1010460219
+      spriteID: aca2cdc1e79636047a5d59b55ba9fcf2
+      internalID: -1113978470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Death5
+      name: Ninja Mei Death_4
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 40
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d86bb199ed2811b4a91b79b032c30e56
-      internalID: -1611618946
+      spriteID: a99afc1837ca8984f998a00334d145fd
+      internalID: 1001292745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Death6
+      name: Ninja Mei Death_5
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 40
         height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 102ac67f990b9c44aa41ad5ad48475bd
-      internalID: -196397157
+      spriteID: 1304001a5d230e24082483696337b76e
+      internalID: 243682526
       vertices: []
       indices: 
       edges: []
@@ -233,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mei_Death1: -971002556
-      Mei_Death2: -597330646
-      Mei_Death3: 1534452318
-      Mei_Death4: -1010460219
-      Mei_Death5: -1611618946
-      Mei_Death6: -196397157
+      Ninja Mei Death_0: 434349256
+      Ninja Mei Death_1: 263629974
+      Ninja Mei Death_2: -572995069
+      Ninja Mei Death_3: -1113978470
+      Ninja Mei Death_4: 1001292745
+      Ninja Mei Death_5: 243682526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

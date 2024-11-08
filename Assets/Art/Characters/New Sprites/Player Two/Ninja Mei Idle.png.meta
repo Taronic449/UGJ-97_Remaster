@@ -93,236 +93,262 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mei_Idle1
+      name: Ninja Mei Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e868ec22deb39214481f6e31976a7296
-      internalID: -48901978
+      spriteID: fd91697bb1832b048b86ffae1901064d
+      internalID: 321498049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle2
+      name: Ninja Mei Idle_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1adef028c9d34e488f5a9bf57918eea
-      internalID: 174065970
+      spriteID: cd3a70c1903b5e34c805022963fa0c27
+      internalID: -562273089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle3
+      name: Ninja Mei Idle_2
       rect:
         serializedVersion: 2
         x: 80
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1072b3cb631003249b065295f7c41337
-      internalID: 1742893809
+      spriteID: 6420dda421d44d74e929734b75d3930f
+      internalID: 345696157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle4
+      name: Ninja Mei Idle_3
       rect:
         serializedVersion: 2
         x: 120
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 291030dc30d08504f95002e6b1af4a86
-      internalID: -1141223975
+      spriteID: 74046da80d1266a4ea29807cd517d802
+      internalID: -1664825296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle5
+      name: Ninja Mei Idle_4
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 739c108163be40945aa0f7c5879105b2
-      internalID: 889195828
+      spriteID: c29bed36a40b04345b701447c2c52826
+      internalID: -347595677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle6
+      name: Ninja Mei Idle_5
       rect:
         serializedVersion: 2
         x: 200
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49334be3943ddbd418e255d22ee2e845
-      internalID: -1784055382
+      spriteID: 91bb6c7a8514501448e3fef9b8d1df20
+      internalID: -1024528174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle7
+      name: Ninja Mei Idle_6
       rect:
         serializedVersion: 2
         x: 240
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f68a24a3bdd8c2e4fa3d5b94a3e935a3
-      internalID: -492368527
+      spriteID: 2dccf277e0119a54cad2fb3c6f2c4e6a
+      internalID: -1586485906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle8
+      name: Ninja Mei Idle_7
       rect:
         serializedVersion: 2
         x: 280
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bc89b1d8a36ab04486df32d43ef1319
-      internalID: 1078812812
+      spriteID: 4861ee3ae808ea94cab4c5f3d96150fc
+      internalID: 1006622555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle9
+      name: Ninja Mei Idle_8
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b90d753fe2bb4a14c92fd73c8e682daf
-      internalID: 810525509
+      spriteID: 3be49e27c1b544c45ac7e9345996dca3
+      internalID: -355677769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle10
+      name: Ninja Mei Idle_9
       rect:
         serializedVersion: 2
         x: 360
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3824a979c1b214fb329904884f1fc4
-      internalID: -918373428
+      spriteID: e46b32d3c50d6cb47b6207c38802c585
+      internalID: 1755559705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Idle11
+      name: Ninja Mei Idle_10
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f177a4423d5ea6a47b6821d1c3102cb7
-      internalID: 2056359095
+      spriteID: 639a98f2287ce704d8799338b8bf904e
+      internalID: 1423263878
       vertices: []
       indices: 
       edges: []
@@ -338,17 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mei_Idle1: -48901978
-      Mei_Idle10: -918373428
-      Mei_Idle11: 2056359095
-      Mei_Idle2: 174065970
-      Mei_Idle3: 1742893809
-      Mei_Idle4: -1141223975
-      Mei_Idle5: 889195828
-      Mei_Idle6: -1784055382
-      Mei_Idle7: -492368527
-      Mei_Idle8: 1078812812
-      Mei_Idle9: 810525509
+      Ninja Mei Idle_0: 321498049
+      Ninja Mei Idle_1: -562273089
+      Ninja Mei Idle_10: 1423263878
+      Ninja Mei Idle_2: 345696157
+      Ninja Mei Idle_3: -1664825296
+      Ninja Mei Idle_4: -347595677
+      Ninja Mei Idle_5: -1024528174
+      Ninja Mei Idle_6: -1586485906
+      Ninja Mei Idle_7: 1006622555
+      Ninja Mei Idle_8: -355677769
+      Ninja Mei Idle_9: 1755559705
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

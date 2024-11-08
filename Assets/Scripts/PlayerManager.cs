@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,20 @@ public class PlayerManager : MonoBehaviour
         foreach (PlayerController item in players)
         {
             item.Initialize();
+        }
+    }
+    internal void Select(PlayerController playerController)
+    {
+        if(FindAnyObjectByType<SelectPlayer>())
+        {
+            if(playerController == players[0])
+            {
+                FindAnyObjectByType<SelectPlayer>().SelectP1();
+            }
+            else
+            {
+                FindAnyObjectByType<SelectPlayer>().SelectP2();
+            }
         }
     }
 }

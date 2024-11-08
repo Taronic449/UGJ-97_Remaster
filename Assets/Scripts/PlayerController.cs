@@ -1,5 +1,7 @@
 using Cinemachine;
+using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using static PowerUp;
@@ -27,10 +29,30 @@ public class PlayerController : MonoBehaviour
     public Transform rotPivot;
 
     private CinemachineVirtualCamera cam;
+    public byte indicator;
+    public bool selected;
+    private byte playerType;
+
+    public AnimatorController yori,Mei;
 
 
     [Header("Debug")]
     public Vector2 moveInput;
+
+    public void SetPlayerType(byte type)
+    {
+        if(type == 0)
+        {
+            ani.runtimeAnimatorController = yori;
+        }
+        else
+        {
+            ani.runtimeAnimatorController = Mei;
+        }
+
+
+        playerType = type;
+    }
 
     void Awake()
     {
@@ -40,14 +62,15 @@ public class PlayerController : MonoBehaviour
         ani = GetComponent<Animator>();
 
         transform.position = new Vector2(10000,10000);
+
         PlayerManager.Instance.players.Add(this);
+
 
         DontDestroyOnLoad(gameObject);
     }
 
     public void Initialize()
     {
-
         // HealthBar.Instance.setHealth(health.health);
         
         cam = GameManger.Instance.cam;
@@ -69,11 +92,29 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = inputValue.Get<Vector2>();
 
+        if(!selected)
+            UpdateIndicator(moveInput.x);
+    }
+
+    void UpdateIndicator(float xInput)
+    {
+        if (xInput > 0)
+        {
+            indicator += 1;
+        }
+        else if (xInput < 0)
+        {
+            indicator -= 1;
+        }
+
+        indicator = (byte)Mathf.Clamp(indicator, 0f, 1f);
     }
 
     void OnFire(InputValue inputValue)
     {
         swordAni.Play("attac");
+
+        PlayerManager.Instance.Select(this);
     }
 
     void OnThrow(InputValue inputValue)

@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 281805786}
   - component: {fileID: 281805787}
   m_Layer: 0
-  m_Name: PlayerManager
+  m_Name: PlayerManager [MANAGER]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1064,12 +1064,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684810168}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1660.0001, y: -156.06403, z: 0}
+  m_LocalScale: {x: 1.4512473, y: 1.4512473, z: 1.4512473}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1622014729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &684810172
 MonoBehaviour:
@@ -1596,9 +1596,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 8
+  function: 12
   brownButton: 0
-  SceneNameOptinal: 
+  SceneNameOptinal: Select Player
   greenButton: 1
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -2869,6 +2869,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1604947098}
+  - {fileID: 684810171}
   m_Father: {fileID: 57486212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3598,7 +3599,6 @@ SceneRoots:
   - {fileID: 726961106}
   - {fileID: 304813659}
   - {fileID: 57486212}
-  - {fileID: 684810171}
   - {fileID: 1500844470}
   - {fileID: 252411418}
   - {fileID: 259380503}

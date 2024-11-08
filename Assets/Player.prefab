@@ -454,6 +454,10 @@ MonoBehaviour:
   projectilePoint: {fileID: 1104578982615576636}
   swordAni: {fileID: 6463421071089607002}
   rotPivot: {fileID: 570623994910389127}
+  indicator: 0
+  selected: 0
+  yori: {fileID: 0}
+  Mei: {fileID: 0}
   moveInput: {x: 0, y: 0}
 --- !u!114 &887215426998184638
 MonoBehaviour:
@@ -595,7 +599,7 @@ Animator:
   m_GameObject: {fileID: 2140124539028523989}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38f1dcb98ec65c9498c83cedf48d4cfc, type: 2}
+  m_Controller: {fileID: 9100000, guid: b4357d7ed2e3dfc4ca479e1240998434, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -93,47 +93,73 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mei_Damaged1
+      name: Ninja Mei Damaged_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0541cd8e7df93624a96b465695d5f6f7
-      internalID: -1967004716
+      spriteID: c87ecc70fc66f1c47bb1402a96974d9d
+      internalID: 150352361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mei_Damaged2
+      name: Ninja Mei Damaged_1
       rect:
         serializedVersion: 2
         x: 40
         y: 0
         width: 40
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6fd52147ab7a4c4d82798133ed5ed11
-      internalID: 2100183379
+      spriteID: 1a95111185d5529499640bec77eef26c
+      internalID: -597607617
       vertices: []
       indices: 
       edges: []
@@ -149,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mei_Damaged1: -1967004716
-      Mei_Damaged2: 2100183379
+      Ninja Mei Damaged_0: 150352361
+      Ninja Mei Damaged_1: -597607617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
