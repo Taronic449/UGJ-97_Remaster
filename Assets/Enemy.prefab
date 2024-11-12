@@ -108,6 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   startoff: {x: 0, y: 0}
+  reingage: 0
+  brainType: 0
+  smartTimer: 30
 --- !u!50 &6645913303585039094
 Rigidbody2D:
   serializedVersion: 4
@@ -284,7 +287,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.3
   m_Speed: 1
-  m_Acceleration: 10
+  m_Acceleration: 40
   avoidancePriority: 50
   m_AngularSpeed: 0
   m_StoppingDistance: 0
