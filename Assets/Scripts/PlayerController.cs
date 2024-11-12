@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
     {
         swordAni.Play("attac");
 
-        PlayerManager.Instance.Select(this);
+        
     }
 
     void OnThrow(InputValue inputValue)
@@ -126,6 +126,8 @@ public class PlayerController : MonoBehaviour
 
             colldown = fish ? 3 : 5;
         }
+
+        PlayerManager.Instance.Select(this);
 
     }
 

@@ -29,18 +29,14 @@ public class SelectPlayer : MonoBehaviour
 
             indicator[0].enabled = true;
             indicator[1].enabled = true;
+            indicator[2].enabled = false;
+            indicator[3].enabled = false;
 
-            if(iP1 == 0)
+            for (int i = 0; i < 2; i++)
             {
-                indicator[0].color = Color.red;
-                indicator[1].color = Color.gray;
-
-            }
-            else
-            {
-                indicator[0].color = Color.gray;
-                indicator[1].color = Color.red;
-            }
+                //black (and other invisible) if selected otherwise red and gray
+                indicator[i].color = i == iP1 ? (PlayerManager.Instance.players[0].selected ? Color.black : Color.red) : (PlayerManager.Instance.players[0].selected ? new Color(0,0,0,0) : Color.gray);
+            } 
         }
         else
         {
@@ -51,29 +47,17 @@ public class SelectPlayer : MonoBehaviour
             indicator[1].enabled = true;
             indicator[2].enabled = true;
             indicator[3].enabled = true;
-
-            if(iP1 == 0)
+            
+            for (int i = 0; i < 2; i++)
             {
-                indicator[0].color = Color.red;
-                indicator[1].color = Color.gray;
+                //black (and other invisible) if selected otherwise red and gray
+                indicator[i].color = i == iP1 ? (PlayerManager.Instance.players[0].selected ? Color.black : Color.red) : (PlayerManager.Instance.players[0].selected ? new Color(0,0,0,0) : Color.gray);
+            } 
 
-            }
-            else
+            for (int i = 2; i < 4; i++)
             {
-                indicator[0].color = Color.gray;
-                indicator[1].color = Color.red;
-            }
-
-            if(iP2 == 0)
-            {
-                indicator[2].color = Color.blue;
-                indicator[3].color = Color.gray;
-
-            }
-            else
-            {
-                indicator[2].color = Color.gray;
-                indicator[3].color = Color.blue;
+                //black (and other invisible) if selected otherwise red and gray
+                indicator[i].color = i-2 == iP2 ? (PlayerManager.Instance.players[1].selected ? Color.black : Color.blue) : (PlayerManager.Instance.players[1].selected ? new Color(0,0,0,0) : Color.gray);
             }
         }
     }
