@@ -51,14 +51,24 @@ public class Enemy : MonoBehaviour
             {
                 if(transform.position.x > player.transform.position.x)
                 {
-                    startoff = new Vector2(3f,0);
+                    startoff = new Vector2(0.3f,0);
                 }
                 else
                 {
-                    startoff = new Vector2(-3f,0);
+                    startoff = new Vector2(-0.3f,0);
                 }
                 
-                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 2);
+                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 20);
+
+                if((player.position - transform.position).magnitude < 2f && !ani.GetBool("attack") && timer < 0)
+                {
+                    timer = 3;
+                    ani.SetBool("attack", true);
+                    reingage = false;   
+                    BrainEvent();
+
+                    agent.isStopped = true;
+                }
             }
         }
         else
@@ -122,6 +132,9 @@ public class Enemy : MonoBehaviour
                     startoff = new Vector2(-0.3f,0);
                 }
 
+                GetComponent<NavMeshAgent>().speed = 1.5f;
+                GetComponent<NavMeshAgent>().avoidancePriority = 1;
+
             return;
 
             case BrainType.speed:
@@ -147,6 +160,8 @@ public class Enemy : MonoBehaviour
             case BrainType.smart:
 
                 smartTimer = -1f;
+                GetComponent<NavMeshAgent>().speed = 2.5f;
+                GetComponent<NavMeshAgent>().avoidancePriority = 1;
                 startoff = (transform.position - player.transform.position).normalized * 3;
 
             return;
@@ -191,10 +206,10 @@ public class Enemy : MonoBehaviour
 
             case BrainType.smart:
 
-                GetComponent<NavMeshAgent>().speed = 1.8f;
-                GetComponent<NavMeshAgent>().avoidancePriority = 1;
+                GetComponent<NavMeshAgent>().speed = 1.5f;
+                GetComponent<NavMeshAgent>().avoidancePriority = 10;
 
-                GetComponent<Animator>().speed = 1.4f;
+                GetComponent<Animator>().speed = 1.3f;
 
             return;
 
