@@ -51,14 +51,14 @@ public class Enemy : MonoBehaviour
             {
                 if(transform.position.x > player.transform.position.x)
                 {
-                    startoff = new Vector2(0.3f,0);
+                    startoff = new Vector2(3f,0);
                 }
                 else
                 {
-                    startoff = new Vector2(-0.3f,0);
+                    startoff = new Vector2(-3f,0);
                 }
                 
-                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 5);
+                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 2);
             }
         }
         else
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
 
         sprite.flipX = player.position.x - transform.position.x > 0;
 
-        if((player.position - transform.position).magnitude < 1.6f && !ani.GetBool("attack") && timer < 0)
+        if((player.position - transform.position).magnitude < 1.3f && !ani.GetBool("attack") && timer < 0)
         {
             timer = 3;
             ani.SetBool("attack", true);
@@ -146,13 +146,13 @@ public class Enemy : MonoBehaviour
 
             case BrainType.smart:
 
+                smartTimer = -1f;
                 startoff = (transform.position - player.transform.position).normalized * 3;
 
             return;
 
             case BrainType.speed:
-                timer = 1.5f;
-                startoff = (transform.position - player.transform.position).normalized * 3;
+                startoff = (transform.position - player.transform.position).normalized * 4.5f;
             return;
 
         }
@@ -163,7 +163,16 @@ public class Enemy : MonoBehaviour
         switch (brainType)
         {
             case BrainType.agressive:
-                startoff = Random.insideUnitCircle * 1;
+                
+                if(transform.position.x > player.transform.position.x)
+                {
+                    startoff = new Vector2(0.3f,0);
+
+                }
+                else
+                {
+                    startoff = new Vector2(-0.3f,0);
+                }
             return;
 
             case BrainType.passive:
@@ -183,11 +192,24 @@ public class Enemy : MonoBehaviour
             case BrainType.smart:
 
                 GetComponent<NavMeshAgent>().speed = 1.8f;
+                GetComponent<NavMeshAgent>().avoidancePriority = 1;
+
                 GetComponent<Animator>().speed = 1.4f;
 
             return;
 
             case BrainType.speed:
+            
+                if(transform.position.x > player.transform.position.x)
+                {
+                    startoff = new Vector2(0.3f,0);
+
+                }
+                else
+                {
+                    startoff = new Vector2(-0.3f,0);
+                }
+
                 GetComponent<NavMeshAgent>().speed = 1.5f;
                 GetComponent<Animator>().speed = 1.5f;
             return;

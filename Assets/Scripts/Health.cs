@@ -34,8 +34,8 @@ public class Health : MonoBehaviour
             showNumber((Vector2) transform.position + new Vector2(Random.Range(0,0.6f) - 0.3f,GetComponent<SpriteRenderer>().bounds.size.y), -_damage);
 
             Debug.Log(knockback.normalized);
-            GetComponent<Rigidbody2D>().AddForce(knockback.normalized * 800f);
-        }       
+    
+            }       
 
         
     }
