@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
                     startoff = new Vector2(-0.3f,0);
                 }
                 
-                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 20);
+                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 15);
 
                 if((player.position - transform.position).magnitude < 2f && !ani.GetBool("attack") && timer < 0)
                 {

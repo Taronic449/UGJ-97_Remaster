@@ -36,7 +36,8 @@ public class UIManger : MonoBehaviour
         Unpause = 7,
         Death = 8,
         SinglePlayer = 11,
-        LoadScene = 12
+        LoadScene = 12,
+        LoadSceneAdd = 13
 
     }
 
@@ -59,6 +60,10 @@ public class UIManger : MonoBehaviour
             case Button.CloseGame:
                 Application.Quit();
             break;
+
+            // case Button.LoadSceneAdd:
+            //     Application.Quit();
+            // break;
 
             case Button.LoadScene:
                 SceneManager.LoadScene(scenename);

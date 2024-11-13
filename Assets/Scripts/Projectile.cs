@@ -16,17 +16,17 @@ public class Projectile : MonoBehaviour, IPoolable
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    public void Initialize()
+    public void Initialize(PlayerController player)
     {
         // Rotate towards mouse
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = (mousePosition - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        // Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // Vector2 direction = (mousePosition - transform.position).normalized;
+        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        rb2d.velocity = direction.normalized * speed;
+        rb2d.velocity = player.transform.right.normalized * speed;
 
-        vel = direction.normalized;
+        vel = player.transform.right.normalized;
     }
 
     void FixedUpdate()

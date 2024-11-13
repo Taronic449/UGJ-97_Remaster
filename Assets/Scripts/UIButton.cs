@@ -36,7 +36,7 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         if (brownButton)
-            text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, -0.6f);
+        	text.GetComponent<RectTransform>().localPosition = new Vector2(0.15f, -0.6f);
     }
 
     public void OnPointerUp(PointerEventData eventData)

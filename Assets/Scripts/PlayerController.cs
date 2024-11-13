@@ -122,9 +122,9 @@ public class PlayerController : MonoBehaviour
         if(colldown < 0)
         {
             GameObject go = Lean.Pool.LeanPool.Spawn(fish ? fishProjectile : shurikenProjectile, projectilePoint.position, Quaternion.Euler(0,0,0));
-            go.GetComponent<Projectile>().Initialize();
+            go.GetComponent<Projectile>().Initialize(this);
 
-            colldown = fish ? 3 : 5;
+            colldown = fish ? 1.5f : 2.5f;
         }
 
         PlayerManager.Instance.Select(this);

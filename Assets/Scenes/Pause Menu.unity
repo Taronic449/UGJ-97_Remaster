@@ -331,8 +331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 0
-  brownButton: 0
+  function: 1
+  brownButton: 1
+  SceneNameOptinal: 
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -646,7 +647,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 100
@@ -1077,8 +1078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 6
-  brownButton: 0
+  function: 7
+  brownButton: 1
+  SceneNameOptinal: 
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
