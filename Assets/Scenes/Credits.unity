@@ -372,9 +372,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687022560ef1eae409466869702f3924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 0}
-  p2: {fileID: 0}
-  count: 0
+  image1: {fileID: 0}
+  image2: {fileID: 0}
+  iP1: 0
+  iP2: 0
+  indicator: []
 --- !u!1 &81106134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,8 +2202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf10d8db9f202f42aa31bc3a31132f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  function: 0
+  function: 1
   brownButton: 1
+  SceneNameOptinal: 
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
