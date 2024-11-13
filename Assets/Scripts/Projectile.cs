@@ -24,9 +24,9 @@ public class Projectile : MonoBehaviour, IPoolable
         // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         // transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        rb2d.velocity = player.transform.right.normalized * speed;
+        rb2d.velocity = (player.GetComponent<SpriteRenderer>().flipX ? new Vector2(1,0) : new Vector2(-1,0)) * speed;
 
-        vel = player.transform.right.normalized;
+        vel = player.GetComponent<SpriteRenderer>().flipX ? new Vector2(1,0) : new Vector2(-1,0);
     }
 
     void FixedUpdate()
