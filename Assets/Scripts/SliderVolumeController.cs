@@ -22,7 +22,7 @@ public class SliderVolumeController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        float savedVolume = PlayerPrefs.GetFloat(parameterName, 0.5f);
+        float savedVolume = PlayerPrefs.GetFloat(parameterName, 1f);
         slider.value = savedVolume;
         ChangeVolume(savedVolume);
         slider.onValueChanged.AddListener(ChangeVolume);

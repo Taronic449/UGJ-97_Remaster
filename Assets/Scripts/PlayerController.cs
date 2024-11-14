@@ -1,7 +1,5 @@
 using Cinemachine;
-using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using static PowerUp;
@@ -33,7 +31,7 @@ public class PlayerController : MonoBehaviour
     public bool selected;
     private byte playerType;
 
-    public AnimatorController yori,Mei;
+    public RuntimeAnimatorController yori,Mei;
 
 
     [Header("Debug")]
