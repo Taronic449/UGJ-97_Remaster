@@ -4008,6 +4008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   function: 5
   brownButton: 0
+  SceneNameOptinal: 
   greenButton: 0
   easeInEaseOutCurve:
     serializedVersion: 2
@@ -8455,6 +8456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e269403020625c4ba83a8b32a720ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
   scoreText: {fileID: 2145776393}
   score: 0
 --- !u!4 &649999044
@@ -11926,7 +11928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644592158842921812, guid: 65c1f936bce881b46a9e66d351e53142, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -8.52
       objectReference: {fileID: 0}
     - target: {fileID: 644592158842921812, guid: 65c1f936bce881b46a9e66d351e53142, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15360,11 +15362,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 644592158842921812, guid: 65c1f936bce881b46a9e66d351e53142, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5
+      value: -10.5
       objectReference: {fileID: 0}
     - target: {fileID: 644592158842921812, guid: 65c1f936bce881b46a9e66d351e53142, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.5
+      value: -8.52
       objectReference: {fileID: 0}
     - target: {fileID: 644592158842921812, guid: 65c1f936bce881b46a9e66d351e53142, type: 3}
       propertyPath: m_LocalPosition.z
