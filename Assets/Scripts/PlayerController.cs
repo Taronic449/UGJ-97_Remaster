@@ -31,7 +31,11 @@ public class PlayerController : MonoBehaviour
     public bool selected;
     private byte playerType;
 
-    public RuntimeAnimatorController yori,Mei;
+    public RuntimeAnimatorController yoriC,meiC;
+    public Sprite yoriS,meiS;
+    public Sprite yoriA,meiA;
+
+
 
 
     [Header("Debug")]
@@ -41,11 +45,18 @@ public class PlayerController : MonoBehaviour
     {
         if(type == 0)
         {
-            ani.runtimeAnimatorController = yori;
+            ani.runtimeAnimatorController = yoriC;
+            transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = yoriS;
+            transform.GetChild(0).GetChild(0).GetChild(1).GetComponent<SpriteRenderer>().sprite = yoriA;
+
         }
         else
         {
-            ani.runtimeAnimatorController = Mei;
+            ani.runtimeAnimatorController = meiC;
+            transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = meiS;
+            transform.GetChild(0).GetChild(0).GetChild(1).GetComponent<SpriteRenderer>().sprite = meiA;
+
+
         }
 
 

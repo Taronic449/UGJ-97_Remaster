@@ -300,13 +300,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 570623994910389127}
   - {fileID: 5959666325739609616}
   - {fileID: 4482748055287644656}
   - {fileID: 6755524522334934515}
   - {fileID: 3863753238935052526}
   - {fileID: 1104578982615576636}
   - {fileID: 2609651842013848620}
-  - {fileID: 570623994910389127}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2296661414266022830
@@ -456,8 +456,12 @@ MonoBehaviour:
   rotPivot: {fileID: 570623994910389127}
   indicator: 0
   selected: 0
-  yori: {fileID: 0}
-  Mei: {fileID: 0}
+  yoriC: {fileID: 9100000, guid: 38f1dcb98ec65c9498c83cedf48d4cfc, type: 2}
+  meiC: {fileID: 9100000, guid: b4357d7ed2e3dfc4ca479e1240998434, type: 2}
+  yoriS: {fileID: 21300000, guid: cbe3d2d662594ff48a6b7112e7d56b99, type: 3}
+  meiS: {fileID: 21300000, guid: dcaea86be3a782945813c8e2c01a4abe, type: 3}
+  yoriA: {fileID: 21300000, guid: 7462697d5d6ed4d4b8891a379b513993, type: 3}
+  meiA: {fileID: 21300000, guid: da48d68df8b67e8469ced7885f1ff64e, type: 3}
   moveInput: {x: 0, y: 0}
 --- !u!114 &887215426998184638
 MonoBehaviour:
@@ -637,7 +641,7 @@ Transform:
   m_GameObject: {fileID: 2989171754435501099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.87330496, w: 0.487174}
-  m_LocalPosition: {x: -0.053, y: 0.319, z: -0.008154371}
+  m_LocalPosition: {x: -0.053, y: 0.38, z: -0.008154371}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
