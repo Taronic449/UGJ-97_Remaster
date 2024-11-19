@@ -3555,7 +3555,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CONNECT\nKeyboard: SPACE \nController: A Button"
+  m_text: 'How To Connect:
+
+    Keyboard - SPACE Bar
+
+    Controller - A Button'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85c33d056994fac469a515dab049beec, type: 2}
   m_sharedMaterial: {fileID: -7262163800916467132, guid: 85c33d056994fac469a515dab049beec, type: 2}
@@ -3594,7 +3598,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: -3.7
   m_wordSpacing: 0
-  m_lineSpacing: -13
+  m_lineSpacing: -4
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
