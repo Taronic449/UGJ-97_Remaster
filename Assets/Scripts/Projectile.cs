@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using Lean.Pool;
 using UnityEngine;
+using static PlayerController;
 
 public class Projectile : MonoBehaviour, IPoolable
 {
@@ -10,19 +9,22 @@ public class Projectile : MonoBehaviour, IPoolable
     public ushort damage;
     public Vector2 vel;
     public float timer;
+    public PlayerType playerType;
 
     void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    public void Initialize(PlayerController player)
+    public void Initialize(PlayerController player, PlayerType newplayerType)
     {
         // Rotate towards mouse
         // Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         // Vector2 direction = (mousePosition - transform.position).normalized;
         // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         // transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        playerType = newplayerType;
 
         rb2d.velocity = (player.GetComponent<SpriteRenderer>().flipX ? new Vector2(1,0) : new Vector2(-1,0)) * speed;
 
@@ -43,7 +45,7 @@ public class Projectile : MonoBehaviour, IPoolable
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<Health>().damage(damage, vel);
+            collision.GetComponent<Health>().damage(damage, vel, true, playerType);
         }
 
         Lean.Pool.LeanPool.Despawn(this);

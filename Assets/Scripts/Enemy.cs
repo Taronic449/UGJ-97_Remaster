@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.AI;
+using static PlayerController;
 
 public class Enemy : MonoBehaviour
 {
@@ -78,8 +79,7 @@ public class Enemy : MonoBehaviour
         }
 
         sprite.flipX = player.position.x - transform.position.x > 0;
-
-        sword.localScale =  player.position.x - transform.position.x > 0 ? new Vector3(1,1,1) : new Vector3(-1,1,1);
+        sword.localScale =  player.position.x - transform.position.x > 0 ? new Vector3(-1,1,1) : new Vector3(1,1,1);
 
         if((player.position - transform.position).magnitude < 1.3f && !ani.GetBool("attack") && timer < 0)
         {
@@ -234,10 +234,19 @@ public class Enemy : MonoBehaviour
 
         }
     }
-
-    public void Death()
+    
+    void Awake()
     {
-        GameManger.Instance.addScore(10);
+        GetComponent<Health>().deathEvent.AddListener(Death);
+    }
+
+    public void Death(PlayerType? playerType)
+    {
+        Debug.Log(playerType);
+        
+        if(playerType != null)
+            GameManger.Instance.addScore(playerType, 10);
+
         Destroy(gameObject);
     }
 

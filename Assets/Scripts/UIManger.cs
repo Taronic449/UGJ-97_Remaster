@@ -34,7 +34,6 @@ public class UIManger : MonoBehaviour
         StartGame = 3,
         Pause = 6,
         Unpause = 7,
-        Death = 8,
         SinglePlayer = 11,
         LoadScene = 12,
         LoadSceneAdd = 13
@@ -85,11 +84,6 @@ public class UIManger : MonoBehaviour
             case Button.Pause:
                 SceneManager.LoadScene("Pause Menu", LoadSceneMode.Additive);
                 Time.timeScale = 0f;
-                PAUSE = true;
-            break;
-            case Button.Death:
-                PlayerPrefs.SetInt("Score", Mathf.Max(GameManger.Instance.score, PlayerPrefs.GetInt("Score")));
-                StartCoroutine(DeathAni());
                 PAUSE = true;
             break;
 

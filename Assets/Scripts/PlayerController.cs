@@ -29,38 +29,40 @@ public class PlayerController : MonoBehaviour
     private CinemachineVirtualCamera cam;
     public byte indicator;
     public bool selected;
-    private byte playerType;
-
     public RuntimeAnimatorController yoriC,meiC;
     public Sprite yoriS,meiS;
     public Sprite yoriA,meiA;
+    public PlayerType playerType;
 
-
+    public enum PlayerType
+    {
+        yori,
+        mei
+    }
 
 
     [Header("Debug")]
     public Vector2 moveInput;
 
-    public void SetPlayerType(byte type)
+    public void SetPlayerType(PlayerType type)
     {
-        if(type == 0)
+        GetComponentInChildren<Sword>().playerType = type;
+
+        if(type == PlayerType.yori)
         {
             ani.runtimeAnimatorController = yoriC;
             transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = yoriS;
             transform.GetChild(0).GetChild(0).GetChild(1).GetComponent<SpriteRenderer>().sprite = yoriA;
-
         }
         else
         {
             ani.runtimeAnimatorController = meiC;
             transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = meiS;
             transform.GetChild(0).GetChild(0).GetChild(1).GetComponent<SpriteRenderer>().sprite = meiA;
-
-
         }
 
-
         playerType = type;
+
     }
 
     void Awake()
@@ -122,8 +124,6 @@ public class PlayerController : MonoBehaviour
     void OnFire(InputValue inputValue)
     {
         swordAni.Play("attac");
-
-        
     }
 
     void OnThrow(InputValue inputValue)
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
         if(colldown < 0)
         {
             GameObject go = Lean.Pool.LeanPool.Spawn(fish ? fishProjectile : shurikenProjectile, projectilePoint.position, Quaternion.Euler(0,0,0));
-            go.GetComponent<Projectile>().Initialize(this);
+            go.GetComponent<Projectile>().Initialize(this, playerType);
 
             colldown = fish ? 1.5f : 2.5f;
         }
@@ -190,7 +190,8 @@ public class PlayerController : MonoBehaviour
     public void hit()
     {
         GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(1);
-        HealthBar.Instance.setHealth(health.health);
+
+        GameManger.Instance.setHealth(playerType, health.health);
 
         ani.SetTrigger("hit");
 
@@ -201,7 +202,6 @@ public class PlayerController : MonoBehaviour
         {
             alive = false;
             GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(3);
-            UIManger.Instance.Press(UIManger.Button.Death,null);
         }
         
     }
@@ -213,7 +213,7 @@ public class PlayerController : MonoBehaviour
         {
             case Effect.RestoreHealth:
                 GetComponent<Health>().heal(999);
-                HealthBar.Instance.setHealth(health.health);
+                GameManger.Instance.setHealth(playerType, health.health);
             break;
 
             case Effect.KillNextEnemys:

@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
+using static PlayerController;
 
 public class Health : MonoBehaviour
 {
     public ushort maxHealth;
     public int health;
-    public UnityEvent deathEvent;
+    public UnityEvent<PlayerType?> deathEvent;
     public UnityEvent damageEvent;
     public GameObject damageObj;
     [SerializeField] private bool shield;
@@ -18,7 +19,7 @@ public class Health : MonoBehaviour
         if(shieldT != null)
             deactivateShield();
     }
-    public void damage(ushort _damage, Vector2 knockback)
+    public void damage(ushort _damage, Vector2 knockback, bool player, PlayerType? playerType)
     {
         if(!shield)
         {
@@ -26,15 +27,12 @@ public class Health : MonoBehaviour
 
             if(health <= 0)
             {
-                deathEvent.Invoke();
+                deathEvent.Invoke(playerType);
             }
 
             damageEvent.Invoke();
-
+            
             showNumber((Vector2) transform.position + new Vector2(Random.Range(0,0.6f) - 0.3f,GetComponent<SpriteRenderer>().bounds.size.y), -_damage);
-
-            Debug.Log(knockback.normalized);
-    
             }       
 
         
@@ -60,15 +58,5 @@ public class Health : MonoBehaviour
     {
         shieldT.SetActive(false);
         shield = false;
-    }
-
-
-    //Test
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            damage(1, Vector2.zero);
-        }
     }
 }
