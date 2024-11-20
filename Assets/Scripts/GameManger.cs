@@ -18,6 +18,9 @@ public class GameManger : MonoBehaviour
     public int scoreP1;
     public int scoreP2;
 
+    public byte deathCount;
+    public CameraCloner cloner;
+
 
     void Awake()
     {
@@ -36,11 +39,19 @@ public class GameManger : MonoBehaviour
             PlayerManager.Instance.InitializeAll();
         }
 
-        if(PlayerManager.Instance.players.Count <= 1)
+        if(PlayerManager.Instance.players.Count == 1)
         {
+            PlayerManager.Instance.players[0].realCam = Camera.main;
+
             healthBarP2.gameObject.SetActive(false);
             scoreTextP2.gameObject.SetActive(false);
         }
+        else
+        {
+            cloner.CloneAndAssignCameras();
+        }
+
+
     }
 
     public void setHealth(PlayerType playerType, int _health)
@@ -55,6 +66,10 @@ public class GameManger : MonoBehaviour
         }
     }
 
+    public void AddDeath()
+    {
+        deathCount++;
+    }
 
 
     public void addScore(PlayerType? playerType, ushort amount)
@@ -62,7 +77,7 @@ public class GameManger : MonoBehaviour
         
         if(playerType == null)
             return;
-            
+
         if(playerType == PlayerType.yori)
         {
             scoreP1 += amount;

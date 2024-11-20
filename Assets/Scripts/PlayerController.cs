@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour
     public ushort damage;
     private Health health;
     private SpriteRenderer spriteR;
-    private bool alive = true;
+    public bool alive = true;
     public bool fish;
     public GameObject fishProjectile;
     public GameObject shurikenProjectile;
     public Transform projectilePoint;
     private Animator ani;
     public Animator swordAni;
+    public Camera realCam;
 
     private float stun;
     private float colldown;
@@ -87,16 +88,60 @@ public class PlayerController : MonoBehaviour
         cam = GameManger.Instance.cam;
         cam.Follow = transform;
     }
-    
-    
-    void Start()
-    {
- 
-    }
+
 
     void OnDestroy()
     {
         PlayerManager.Instance.players.Remove(this);
+    }
+
+void OnAim(InputValue inputValue)
+{
+    Vector2 inputVector = inputValue.Get<Vector2>();
+
+    Vector3 aimPosition;
+    if (IsUsingMouseInput())
+    {
+        // Mouse aiming
+        aimPosition = realCam.ScreenToWorldPoint(inputVector);
+    }
+    else
+    {
+        // Gamepad aiming
+        Vector3 stickDirection = new Vector3(inputVector.x, inputVector.y, 0);
+        aimPosition = transform.position + stickDirection;
+    }
+
+    aimPosition.z = 0;
+
+    Vector3 direction = (aimPosition - transform.position).normalized;
+    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+    rotPivot.rotation = Quaternion.Euler(0, 0, angle + 180);
+    rotPivot.GetComponent<SortingGroup>().sortingOrder = angle > 50 || angle < -95 ? 0 : 1;
+
+    spriteR.flipX = aimPosition.x > transform.position.x;
+}
+
+// Helper method to check input device type
+private bool IsUsingMouseInput()
+{
+    PlayerInput playerInput = GetComponent<PlayerInput>();
+
+    if (playerInput != null)
+    {
+        return playerInput.currentControlScheme == "Keyboard&Mouse";
+    }
+
+    Debug.LogWarning("PlayerInput component not found!");
+    return false;
+}
+
+
+
+    void OnSelect(InputValue inputValue)
+    {
+         PlayerManager.Instance.Select(this);
     }
 
     void OnMove(InputValue inputValue)
@@ -123,11 +168,17 @@ public class PlayerController : MonoBehaviour
 
     void OnFire(InputValue inputValue)
     {
+        if(!alive)
+            return;
+
         swordAni.Play("attac");
     }
 
     void OnThrow(InputValue inputValue)
     {
+        if(!alive)
+            return;
+
         if(colldown < 0)
         {
             GameObject go = Lean.Pool.LeanPool.Spawn(fish ? fishProjectile : shurikenProjectile, projectilePoint.position, Quaternion.Euler(0,0,0));
@@ -136,7 +187,7 @@ public class PlayerController : MonoBehaviour
             colldown = fish ? 1.5f : 2.5f;
         }
 
-        PlayerManager.Instance.Select(this);
+       
 
     }
 
@@ -150,24 +201,9 @@ public class PlayerController : MonoBehaviour
 
         targetVelocity = moveInput * moveSpeed;
 
-        spriteR.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x;
-
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        mousePosition.z = 0;
-
-        Vector3 direction = (mousePosition - transform.position).normalized;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        rotPivot.rotation = Quaternion.Euler(0, 0, angle + 180);
-
-        rotPivot.GetComponent<SortingGroup>().sortingOrder = angle > 50 || angle < -95 ? 0 : 1;
-
         colldown -= Time.deltaTime;
 
         stun -= Time.deltaTime;
-
 
         ani.SetFloat("speed", rb.velocity.magnitude);
     }
@@ -189,6 +225,9 @@ public class PlayerController : MonoBehaviour
     //Damage
     public void hit()
     {
+        if(!alive)
+            return;
+
         GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(1);
 
         GameManger.Instance.setHealth(playerType, health.health);
@@ -202,6 +241,17 @@ public class PlayerController : MonoBehaviour
         {
             alive = false;
             GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(3);
+            GetComponent<Health>().enabled = false;
+
+            foreach (Enemy item in FindObjectsByType<Enemy>(FindObjectsSortMode.None))
+            {
+                item.ResetPlayer();
+            }
+
+            GameManger.Instance.AddDeath();
+
+            transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+            ani.SetBool("dead", true);
         }
         
     }

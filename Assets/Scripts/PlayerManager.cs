@@ -35,10 +35,12 @@ public class PlayerManager : MonoBehaviour
         {
             if(playerController == players[0])
             {
+                Debug.Log("select P1");
                 FindAnyObjectByType<SelectPlayer>().SelectP1();
             }
             else
             {
+                Debug.Log("select P2");
                 FindAnyObjectByType<SelectPlayer>().SelectP2();
             }
         }

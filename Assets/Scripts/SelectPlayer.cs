@@ -83,20 +83,19 @@ public class SelectPlayer : MonoBehaviour
 
     public void SelectP2()
     {
-        if(iP1 == 0 && image1.color.a > 0.8f)
+        if(iP2 == 0 && image1.color.a > 0.8f)
         {
             PlayerManager.Instance.players[1].selected = true;
             image1.color = new Color(1,1,1,0.7f);
 
             PlayerManager.Instance.players[1].SetPlayerType(0);
         }
-        else if(iP1 == 1 && image2.color.a > 0.8f)
+        else if(iP2 == 1 && image2.color.a > 0.8f)
         {
             PlayerManager.Instance.players[1].selected = true;
             image2.color = new Color(1,1,1,0.7f);
 
-            PlayerManager.Instance.players[0].SetPlayerType(0);
-
+            PlayerManager.Instance.players[1].SetPlayerType(0);
         }
     }
 

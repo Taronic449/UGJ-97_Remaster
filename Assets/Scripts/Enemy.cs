@@ -1,4 +1,6 @@
 
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 using static PlayerController;
@@ -26,11 +28,25 @@ public class Enemy : MonoBehaviour
         speed
     }
 
+    public void ResetPlayer()
+    {
+        List<PlayerController> players = PlayerManager.Instance.players.ToList();
+        players.RemoveAll(player => !player.alive);
+
+        if(players.Count > 0)
+            player = players[Random.Range(0,players.Count)].transform;
+    }
+
     void Start()
     {
         brainType = (BrainType)Random.Range(0,4);
 
-        player = FindAnyObjectByType<PlayerController>().transform;
+        List<PlayerController> players = PlayerManager.Instance.players.ToList();
+        players.RemoveAll(player => !player.alive);
+
+        if(players.Count > 0)
+            player = players[Random.Range(0,players.Count)].transform;
+
         ani = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
@@ -42,6 +58,9 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(player == null)
+            return;
+
         if(brainType == BrainType.smart)
         {
             if(smartTimer <= 0)
@@ -243,7 +262,7 @@ public class Enemy : MonoBehaviour
     public void Death(PlayerType? playerType)
     {
         Debug.Log(playerType);
-        
+
         if(playerType != null)
             GameManger.Instance.addScore(playerType, 10);
 
