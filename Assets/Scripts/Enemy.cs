@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sprite;
     public float timer;
     private NavMeshAgent agent;
+    public Transform sword;
 
     public Vector2 startoff;
     public bool reingage;
@@ -77,6 +78,8 @@ public class Enemy : MonoBehaviour
         }
 
         sprite.flipX = player.position.x - transform.position.x > 0;
+
+        sword.localScale =  player.position.x - transform.position.x > 0 ? new Vector3(1,1,1) : new Vector3(-1,1,1);
 
         if((player.position - transform.position).magnitude < 1.3f && !ani.GetBool("attack") && timer < 0)
         {
