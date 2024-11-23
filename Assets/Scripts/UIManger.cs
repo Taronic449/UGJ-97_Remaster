@@ -11,6 +11,7 @@ public class UIManger : MonoBehaviour
     public static bool PAUSE;
     private Image darkenImage;
     public GameObject messageCanvas;
+    public GameObject joiner;
 
     void Awake()
     {
@@ -37,8 +38,8 @@ public class UIManger : MonoBehaviour
         SinglePlayer = 11,
         LoadScene = 12,
         LoadSceneAdd = 13,
-        Death
-
+        Death,
+        COOPFORCE
     }
 
     public void Press(Button function, string? scenename)
@@ -76,10 +77,13 @@ public class UIManger : MonoBehaviour
             break;
 
             case Button.SinglePlayer:
-                SceneManager.LoadScene("Select Stage");
-                FindAnyObjectByType<PlayerInputManager>().JoinPlayer(pairWithDevice: default);
+                
+                GameObject go = Instantiate(joiner);
+                go.GetComponent<PlayerInputManager>().JoinPlayer(pairWithDevice: default);
                 PAUSE = false;
                 Time.timeScale = 1f;
+
+                SceneManager.LoadScene("Select Stage");
             break;
 
             case Button.Pause:
@@ -129,7 +133,18 @@ public class UIManger : MonoBehaviour
             if (!hasLoadedScene && elapsedTime >= 5f)
             {
                 hasLoadedScene = true;
-                SceneManager.LoadScene("Match Over", LoadSceneMode.Additive);
+
+                foreach (var item in FindObjectsOfType<PlayerController>())
+                {
+                    Destroy(item.gameObject);
+                }
+
+                if(PlayerManager.Instance.players.Count == 1)
+                    SceneManager.LoadScene("Single Match Over", LoadSceneMode.Single);
+                else
+                    SceneManager.LoadScene("Coop Match Over", LoadSceneMode.Single);
+
+
             }
 
             yield return null; 

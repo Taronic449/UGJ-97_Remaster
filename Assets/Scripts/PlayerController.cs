@@ -100,6 +100,10 @@ void OnAim(InputValue inputValue)
     Vector2 inputVector = inputValue.Get<Vector2>();
 
     Vector3 aimPosition;
+
+    if(realCam == null)
+        return;
+
     if (IsUsingMouseInput())
     {
         // Mouse aiming
