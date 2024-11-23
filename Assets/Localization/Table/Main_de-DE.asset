@@ -42,6 +42,26 @@ MonoBehaviour:
     m_Localized: Intro
     m_Metadata:
       m_Items: []
+  - m_Id: 11875655063228416
+    m_Localized: Der Kampf ist zu Ende!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876232685998080
+    m_Localized: Erneut Versuchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876507421298688
+    m_Localized: Titelbildschirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12896929214418944
+    m_Localized: Punkte P1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12897000488226816
+    m_Localized: Punkte P2
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

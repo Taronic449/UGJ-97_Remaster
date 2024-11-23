@@ -39,6 +39,26 @@ MonoBehaviour:
     m_Key: Exit
     m_Metadata:
       m_Items: []
+  - m_Id: 11875655063228416
+    m_Key: GameOver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876232685998080
+    m_Key: PlayAgain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876507421298688
+    m_Key: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12896929214418944
+    m_Key: Score_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12897000488226816
+    m_Key: Score_2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

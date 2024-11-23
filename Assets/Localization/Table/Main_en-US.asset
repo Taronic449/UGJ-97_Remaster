@@ -42,6 +42,26 @@ MonoBehaviour:
     m_Localized: Tutorial
     m_Metadata:
       m_Items: []
+  - m_Id: 11875655063228416
+    m_Localized: The Battle is Over!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876232685998080
+    m_Localized: Play Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876507421298688
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12896929214418944
+    m_Localized: P1 Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12897000488226816
+    m_Localized: P2 Score
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
