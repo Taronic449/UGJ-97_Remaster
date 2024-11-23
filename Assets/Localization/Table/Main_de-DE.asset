@@ -62,6 +62,10 @@ MonoBehaviour:
     m_Localized: Punkte P2
     m_Metadata:
       m_Items: []
+  - m_Id: 12899454126706688
+    m_Localized: 'Deine Punktzahl:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

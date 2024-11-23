@@ -21,6 +21,8 @@ public class GameManger : MonoBehaviour
     public byte deathCount;
     public CameraCloner cloner;
 
+    public bool coop;
+
 
     void Awake()
     {
@@ -45,10 +47,14 @@ public class GameManger : MonoBehaviour
 
             healthBarP2.gameObject.SetActive(false);
             scoreTextP2.gameObject.SetActive(false);
+
+            coop = false;
         }
         else
         {
             cloner.CloneAndAssignCameras();
+
+            coop = true;
         }
 
 
@@ -69,6 +75,12 @@ public class GameManger : MonoBehaviour
     public void AddDeath()
     {
         deathCount++;
+
+        if(deathCount == PlayerManager.Instance.players.Count)
+        {
+            UIManger.Instance.Press(UIManger.Button.Death, null);
+        }
+
     }
 
 

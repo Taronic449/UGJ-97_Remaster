@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: Score_2
     m_Metadata:
       m_Items: []
+  - m_Id: 12899454126706688
+    m_Key: ScoreSingle
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

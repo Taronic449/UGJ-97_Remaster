@@ -36,7 +36,8 @@ public class UIManger : MonoBehaviour
         Unpause = 7,
         SinglePlayer = 11,
         LoadScene = 12,
-        LoadSceneAdd = 13
+        LoadSceneAdd = 13,
+        Death
 
     }
 
@@ -91,6 +92,9 @@ public class UIManger : MonoBehaviour
                 Time.timeScale = 1f;
                 SceneManager.UnloadSceneAsync("Pause Menu");
                 PAUSE = false;
+            break;
+            case Button.Death:
+                StartCoroutine(DeathAni());
             break;
 
             default:
