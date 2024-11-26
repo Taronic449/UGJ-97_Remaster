@@ -9,7 +9,8 @@ public class PowerUp : MonoBehaviour
     {
         RestoreHealth,
         KillNextEnemys,
-        ProtectFromAttacks
+        ProtectFromAttacks,
+        KillAllEnemys
 
     }
     

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,7 +31,7 @@ public class EmblemManger : MonoBehaviour
                 IDs.Add(item.GetComponent<PowerUp>().ID);
         }
 
-        for (ushort i = 0; i < 2; i++)
+        for (ushort i = 0; i < 4; i++)
         {
             transform.GetChild(i).gameObject.SetActive(IDs.Contains(i));
         }

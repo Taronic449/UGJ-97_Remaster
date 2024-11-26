@@ -14,10 +14,6 @@ public class GameManger : MonoBehaviour
     public HealthBar  healthBarP1;
     public HealthBar  healthBarP2;
 
-
-    public int scoreP1;
-    public int scoreP2;
-
     public byte deathCount;
     public CameraCloner cloner;
 
@@ -26,6 +22,9 @@ public class GameManger : MonoBehaviour
 
     void Awake()
     {
+        HighScore.score1 = 0;
+        HighScore.score2 = 0;
+
         if (Instance == null)
         {
             Instance = this;
@@ -92,7 +91,7 @@ public class GameManger : MonoBehaviour
 
         if(playerType == PlayerType.yori)
         {
-            scoreP1 += amount;
+            HighScore.score1 += amount;
 
             LeanTween.scale(scoreTextP1.gameObject, Vector3.one * 1.5f, 0.15f).setEase(LeanTweenType.easeInOutExpo).setOnComplete(() =>
             {
@@ -103,7 +102,7 @@ public class GameManger : MonoBehaviour
         }
         else
         {
-            scoreP2 += amount;
+            HighScore.score2 += amount;
 
             LeanTween.scale(scoreTextP2.gameObject, Vector3.one * 1.5f, 0.15f).setEase(LeanTweenType.easeInOutExpo).setOnComplete(() =>
             {
@@ -116,7 +115,7 @@ public class GameManger : MonoBehaviour
 
     void Update()
     {
-        scoreTextP1.text  = "Score: " + scoreP1.ToString();
-        scoreTextP2.text  = "Score: " + scoreP2.ToString();
+        scoreTextP1.text  = "Score: " + HighScore.score1.ToString();
+        scoreTextP2.text  = "Score: " + HighScore.score2.ToString();
     }
 }

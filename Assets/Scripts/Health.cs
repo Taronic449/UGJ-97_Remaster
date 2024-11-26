@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
             damageEvent.Invoke();
             
             showNumber((Vector2) transform.position + new Vector2(Random.Range(0,0.6f) - 0.3f,GetComponent<SpriteRenderer>().bounds.size.y), -_damage);
-            }       
+        }       
 
         
     }
@@ -45,6 +45,7 @@ public class Health : MonoBehaviour
     }
     public void heal(ushort amount)
     {
+        Debug.Log("heal");
         showNumber((Vector2) transform.position + new Vector2(0,GetComponent<SpriteRenderer>().bounds.size.y), Mathf.Clamp(health + amount, 0,maxHealth) - health);
         health = Mathf.Clamp(health + amount, 0,maxHealth);
     }

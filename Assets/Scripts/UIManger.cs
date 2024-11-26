@@ -42,6 +42,7 @@ public class UIManger : MonoBehaviour
         COOPFORCE
     }
 
+    #nullable enable
     public void Press(Button function, string? scenename)
     {
         switch (function)
@@ -105,6 +106,8 @@ public class UIManger : MonoBehaviour
                 break;
         }
     }
+
+    #nullable disable
 
     private IEnumerator DeathAni()
     {

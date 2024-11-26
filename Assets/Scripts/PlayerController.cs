@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour
     public enum PlayerType
     {
         yori,
-        mei
+        mei,
+        none
     }
 
 
@@ -278,6 +279,13 @@ private bool IsUsingMouseInput()
 
             case Effect.ProtectFromAttacks:
                 GetComponent<Health>().activateShield();
+            break;
+
+            case Effect.KillAllEnemys:
+                foreach (Enemy item in FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                {
+                    item.Death(null);
+                }
             break;
 
             default:
