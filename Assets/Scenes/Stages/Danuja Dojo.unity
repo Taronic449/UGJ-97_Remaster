@@ -557,6 +557,7 @@ MonoBehaviour:
   damage: 1
   vel: {x: -5.391952, y: -2.6318908}
   timer: 0
+  playerType: 0
 --- !u!50 &189600680
 Rigidbody2D:
   serializedVersion: 4
@@ -745,6 +746,7 @@ MonoBehaviour:
   damage: 1
   vel: {x: -5.753635, y: -1.7016717}
   timer: 0
+  playerType: 0
 --- !u!50 &190415287
 Rigidbody2D:
   serializedVersion: 4
@@ -13798,8 +13800,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  scoreText: {fileID: 2145776393}
-  score: 0
+  scoreTextP1: {fileID: 0}
+  scoreTextP2: {fileID: 0}
+  healthBarP1: {fileID: 0}
+  healthBarP2: {fileID: 0}
+  scoreP1: 0
+  scoreP2: 0
+  deathCount: 0
+  cloner: {fileID: 0}
+  coop: 0
 --- !u!4 &649999044
 Transform:
   m_ObjectHideFlags: 0
@@ -15346,6 +15355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageCanvas: {fileID: 751944349}
+  joiner: {fileID: 0}
 --- !u!4 &1112307541
 Transform:
   m_ObjectHideFlags: 0
@@ -17597,6 +17607,7 @@ MonoBehaviour:
   damage: 1
   vel: {x: -5.2319174, y: -2.9371831}
   timer: 0
+  playerType: 0
 --- !u!50 &1196925519
 Rigidbody2D:
   serializedVersion: 4
@@ -21940,6 +21951,7 @@ MonoBehaviour:
   damage: 1
   vel: {x: -5.3816285, y: -2.652937}
   timer: 0
+  playerType: 0
 --- !u!50 &1508540085
 Rigidbody2D:
   serializedVersion: 4
@@ -22289,6 +22301,7 @@ MonoBehaviour:
   damage: 1
   vel: {x: -5.9730864, y: 0.5676595}
   timer: 0
+  playerType: 0
 --- !u!50 &1600036327
 Rigidbody2D:
   serializedVersion: 4
@@ -22451,6 +22464,7 @@ GameObject:
   - component: {fileID: 1625616017}
   - component: {fileID: 1625616019}
   - component: {fileID: 1625616018}
+  - component: {fileID: 1625616020}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -22574,6 +22588,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625616016}
   m_CullTransparentMesh: 1
+--- !u!114 &1625616020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625616016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:8c55ab79abb82a248a411fcf87d6ba41
+    m_TableEntryReference:
+      m_KeyId: 13928174018940928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1625616018}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1658363096
 GameObject:
   m_ObjectHideFlags: 0

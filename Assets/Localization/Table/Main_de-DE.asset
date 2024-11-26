@@ -66,6 +66,128 @@ MonoBehaviour:
     m_Localized: 'Deine Punktzahl:'
     m_Metadata:
       m_Items: []
+  - m_Id: 13925353966063616
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13925425650913280
+    m_Localized: "Taronic449 - Level-Designer, 2D-K\xFCnstler, 2D-Animator\r\nPingu
+      - Programmierer, QA-Tester, Deutsch-\xDCbersetzer\r\nBright Maddox - Sound-Designer\r\nBard
+      Sound Lab - Sound-Designer\r\nTurtleBox - Musikkomponist\r\nRise - Spanisch-\xDCbersetzer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13926885344202752
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13926902691844096
+    m_Localized: Soundeffekte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13928174018940928
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13928347394691072
+    m_Localized: Fortsetzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929194967060480
+    m_Localized: "W\xE4hle deinen Charakter"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929366828666880
+    m_Localized: 'So verbindest du dich:
+
+      Tastatur - Leertaste
+
+      Controller
+      - A-Knopf'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929391826718720
+    m_Localized: Weiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13933251995684864
+    m_Localized: "W\xE4hle das Level"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13933439162306560
+    m_Localized: "Hauptmen\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934157852102656
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934106933252096
+    m_Localized: Lore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934259702386688
+    m_Localized: "Yoris Heimat wird angegriffen! Die Danuja Ronin, eine Klasse von
+      Schwert k\xE4mpfenden Hunden, haben im Land Chaos gestiftet. Da niemand mehr
+      \xFCbrig ist, um diese Schurken zu stoppen, muss Yori sich r\xFCsten und den
+      Kampf zu ihnen bringen!\r\n\r\nBesiege jeden Feind und baue deinen Punktestand
+      auf. Nur du kannst den Frieden in Yoris Heimat bewahren!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935202846167040
+    m_Localized: Tastatur & Maus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935224245506048
+    m_Localized: "WASD-Tasten zum Bewegen\r\nLEERTASTE zum Schie\xDFen\r\nMaus zum
+      Drehen\nLinksklick zum Schwert angriff"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935863939780608
+    m_Localized: Xbox Controller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936066851819520
+    m_Localized: "Linker Joystick zum Bewegen\nRechter Joystick zum\nRB-Taste zum
+      Schie\xDFen\nRT-Taste zum Schwert angriff"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936901463789568
+    m_Localized: Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937368772169728
+    m_Localized: "Sardinenb\xFCchse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936951048851456
+    m_Localized: "Erm\xF6glicht dem Spieler, Fische zu schie\xDFen. Fische besiegen
+      Gegner mit einem Treffer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937371741736960
+    m_Localized: "Wollkn\xE4uel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937374547726336
+    m_Localized: "Erstellt einen Schild, der den Spieler vor Schaden sch\xFCtzt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939100369604608
+    m_Localized: Milchflasche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939160310403072
+    m_Localized: Stellt die Gesundheit des Spielers wieder her
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939196947648512
+    m_Localized: Katzenfutterbeutel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939485431877632
+    m_Localized: Eliminiert alle Feinde auf dem Feld
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -66,6 +66,155 @@ MonoBehaviour:
     m_Localized: 'Your Score:'
     m_Metadata:
       m_Items: []
+  - m_Id: 13925353966063616
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13925425650913280
+    m_Localized: 'Taronic449 - Level Designer, 2D Artist, 2D Animator
+
+      Pingu
+      - Programmer, QA Tester, German Translator
+
+      Bright Maddox - Sound Designer
+
+      Bard
+      Sound Lab - Sound Designer
+
+      TurtleBox - Music Composer
+
+      Rise -
+      Spanish Translator'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13926885344202752
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13926902691844096
+    m_Localized: 'Sound
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13928174018940928
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13928347394691072
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929194967060480
+    m_Localized: Select a character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929366828666880
+    m_Localized: 'How To Connect:
+
+      Keyboard - SPACE Bar
+
+      Controller -
+      A Button'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929391826718720
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13933251995684864
+    m_Localized: Choose A Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13933439162306560
+    m_Localized: Main Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934157852102656
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934106933252096
+    m_Localized: Backstory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934259702386688
+    m_Localized: 'Yori''s homeland is under attack! The Danuja Ronin, a class of
+      sword-fighting dogs, have created chaos in the region. With no one left to
+      stop these scoundrels, Yori must suit up and take the fight to them!
+
+
+      Defeat
+      each enemy and build up your score. Only you can preserve the peace of Yori''s
+      home!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935202846167040
+    m_Localized: Keyboard & Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935224245506048
+    m_Localized: 'WASD Keys to move
+
+      SPACE Bar to fire projectile
+
+      Mouse
+      to rotate weapon
+
+      Left-Click to use weapon'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935863939780608
+    m_Localized: Xbox Controller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936066851819520
+    m_Localized: 'Left Joystick to move
+
+      Right Joystick to rotate weapon
+
+      RB
+      Button to fire projectile
+
+      RT Button to use weapon'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936901463789568
+    m_Localized: Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937368772169728
+    m_Localized: Sardine Can
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936951048851456
+    m_Localized: Allows player to shoot fish. Each fish kills one enemy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937371741736960
+    m_Localized: Yarn Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937374547726336
+    m_Localized: Creates a shield that protects player from damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939100369604608
+    m_Localized: Milk Bottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939160310403072
+    m_Localized: Restores player's health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939196947648512
+    m_Localized: Cat Food Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939485431877632
+    m_Localized: Eliminates all enemies on the field
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

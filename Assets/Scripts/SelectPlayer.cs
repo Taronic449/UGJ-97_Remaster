@@ -8,6 +8,8 @@ public class SelectPlayer : MonoBehaviour
     public Image image1;
     public Image image2;
     public byte iP1, iP2;
+    public Button next;
+    public byte selectCount;
 
     public List<TextMeshProUGUI> indicator;
     void Start()
@@ -79,6 +81,14 @@ public class SelectPlayer : MonoBehaviour
             PlayerManager.Instance.players[0].SetPlayerType(PlayerController.PlayerType.mei);
 
         }
+
+        selectCount++;
+
+        if(selectCount == 2)
+        {
+            next.interactable = true;
+        }
+
     }
 
     public void SelectP2()
@@ -97,6 +107,12 @@ public class SelectPlayer : MonoBehaviour
 
             PlayerManager.Instance.players[1].SetPlayerType(0);
         }
-    }
 
+        selectCount++;
+
+        if(selectCount == 2)
+        {
+            next.interactable = true;
+        }
+    }
 }
