@@ -36,11 +36,27 @@ public class SelectStage : MonoBehaviour
 
     public void DanujaDojo()
     {
+        int n = 0;
+
+        foreach (PlayerController item in PlayerManager.Instance.players)
+        {
+            item.transform.position = new Vector2(n*2,0);
+            n++;
+        }
+
         SceneManager.LoadScene("Danuja Dojo");
     }
 
     public void VolatileVolcano()
     {
+        int n = 0;
+
+        foreach (PlayerController item in PlayerManager.Instance.players)
+        {
+            item.transform.position = new Vector2(n*2,0);
+            n++;
+        }
+
         SceneManager.LoadScene("Volatile Volcano");
     }
 }
