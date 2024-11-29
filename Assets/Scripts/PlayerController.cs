@@ -1,3 +1,4 @@
+using System.Linq;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -34,6 +35,13 @@ public class PlayerController : MonoBehaviour
     public Sprite yoriS,meiS;
     public Sprite yoriA,meiA;
     public PlayerType playerType;
+    private AudioSource audioSource;
+
+    [Header("Clips")]
+    public AudioClip attack;
+    public AudioClip powerUp;
+    public AudioClip shuriken;
+    public AudioClip[] stepClips;
 
     public enum PlayerType
     {
@@ -69,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         health = GetComponent<Health>();
         spriteR = GetComponent<SpriteRenderer>();
@@ -80,6 +89,12 @@ public class PlayerController : MonoBehaviour
 
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void Attack()
+    {
+        audioSource.PlayOneShot(attack);
+        
     }
 
     public void Initialize()
@@ -175,6 +190,7 @@ private bool IsUsingMouseInput()
     {
         if(!alive)
             return;
+        
 
         swordAni.Play("attac");
     }
@@ -192,7 +208,7 @@ private bool IsUsingMouseInput()
             colldown = fish ? 1.5f : 2.5f;
         }
 
-       
+       audioSource.PlayOneShot(shuriken);
 
     }
 
@@ -226,6 +242,10 @@ private bool IsUsingMouseInput()
         
     }
 
+    public void Step()
+    {
+        audioSource.PlayOneShot(stepClips[Random.Range(0,stepClips.Count())]);
+    }
 
     //Damage
     public void hit()
@@ -264,6 +284,8 @@ private bool IsUsingMouseInput()
     //Effects
     public bool SetEffect(Effect effect)
     {
+        audioSource.PlayOneShot(powerUp);
+
         switch (effect)
         {
             case Effect.RestoreHealth:

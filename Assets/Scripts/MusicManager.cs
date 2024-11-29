@@ -4,16 +4,20 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     private AudioSource audioSource;
+    private AudioSource fsxAudioSource;
 
     public static MusicManager Instance;
-
     public AudioClip target;
     public AudioClip curent;
+
+    [Header("Clips")]
+    public AudioClip press;
 
     
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        fsxAudioSource = transform.GetChild(0).GetComponent<AudioSource>();
         
         if(Instance == null)
         {
@@ -25,6 +29,10 @@ public class MusicManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+    public void PressSound()
+    {
+        fsxAudioSource.PlayOneShot(press);
     }
 
     public void PlayMusic(AudioClip clip)

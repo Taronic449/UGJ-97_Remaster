@@ -56,6 +56,8 @@ public class UIButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         {
             UIManger.Instance.Press(function,SceneNameOptinal);
         }
+
+        MusicManager.Instance.PressSound();
     }
 
     private IEnumerator RollUp()

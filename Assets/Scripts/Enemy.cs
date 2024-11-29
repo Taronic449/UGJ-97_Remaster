@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     public BrainType brainType;
     public float smartTimer = 15f;
 
+    public GameObject deathSFX;
+
 
     public enum BrainType
     {
@@ -267,6 +269,8 @@ public class Enemy : MonoBehaviour
             GameManger.Instance.addScore(playerType, 10);
 
         Destroy(gameObject);
+
+        Lean.Pool.LeanPool.Spawn(deathSFX);
     }
 
     public void hit()
