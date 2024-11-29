@@ -1,5 +1,4 @@
 
-using Cinemachine;
 using TMPro;
 using UnityEngine;
 using static PlayerController;
@@ -7,7 +6,7 @@ using static PlayerController;
 public class GameManger : MonoBehaviour
 {
     public static GameManger Instance;
-    public CinemachineVirtualCamera cam;
+    public Camera cam;
     public TextMeshProUGUI scoreTextP1;
     public TextMeshProUGUI scoreTextP2;
 

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
 
 public class CameraCloner : MonoBehaviour
@@ -21,9 +20,6 @@ public class CameraCloner : MonoBehaviour
     // Method to clone the camera and assign it to players
     public void CloneAndAssignCameras()
     {
-        Destroy(FindObjectOfType<CinemachineVirtualCamera>().gameObject);
-
-        gameObject.GetComponent<CinemachineBrain>().enabled = false;
    
 
         if (PlayerManager.Instance.players == null || PlayerManager.Instance.players.Count == 0)
@@ -41,7 +37,6 @@ public class CameraCloner : MonoBehaviour
             {
                 // Clone the main camera
                 Camera clonedCamera = Instantiate(gameObject, player.transform.position + cameraOffset, Quaternion.identity).GetComponent<Camera>();
-                clonedCamera.gameObject.GetComponent<CinemachineBrain>().enabled = false;
 
                 player.realCam = clonedCamera;
 

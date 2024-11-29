@@ -133,7 +133,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -7349313585646675227, guid: 9dab7738464ed194892642785cc609c0, type: 2}
   m_audioClip: {fileID: 8300000, guid: ab46133e21c2ddb4c96691b5c702f15f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.825
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -142,9 +142,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -177,7 +177,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.498
+      value: 0.8
       inSlope: 0
       outSlope: 0
       tangentMode: 0

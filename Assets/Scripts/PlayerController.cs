@@ -1,5 +1,4 @@
 using System.Linq;
-using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -28,7 +27,7 @@ public class PlayerController : MonoBehaviour
     private float colldown;
     public Transform rotPivot;
 
-    private CinemachineVirtualCamera cam;
+    private Camera cam;
     public byte indicator;
     public bool selected;
     public RuntimeAnimatorController yoriC,meiC;
@@ -102,7 +101,7 @@ public class PlayerController : MonoBehaviour
         // HealthBar.Instance.setHealth(health.health);
         
         cam = GameManger.Instance.cam;
-        cam.Follow = transform;
+        cam.GetComponent<CameraFollower>().target = transform;
     }
 
 
@@ -253,8 +252,6 @@ private bool IsUsingMouseInput()
         if(!alive)
             return;
 
-        GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(1);
-
         GameManger.Instance.setHealth(playerType, health.health);
 
         ani.SetTrigger("hit");
@@ -265,7 +262,6 @@ private bool IsUsingMouseInput()
         if(alive)
         {
             alive = false;
-            GetComponent<CinemachineImpulseSource>().GenerateImpulseWithForce(3);
             GetComponent<Health>().enabled = false;
 
             foreach (Enemy item in FindObjectsByType<Enemy>(FindObjectsSortMode.None))
