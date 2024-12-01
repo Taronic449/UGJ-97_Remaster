@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip shuriken;
     public AudioClip[] stepClips;
 
+
     public enum PlayerType
     {
         yori,
@@ -49,12 +50,14 @@ public class PlayerController : MonoBehaviour
         none
     }
 
-
     [Header("Debug")]
     public Vector2 moveInput;
 
     public void SetPlayerType(PlayerType type)
     {
+
+        Debug.Log("Initializing player as: " + type);
+
         GetComponentInChildren<Sword>().playerType = type;
 
         if(type == PlayerType.yori)
@@ -82,6 +85,7 @@ public class PlayerController : MonoBehaviour
         spriteR = GetComponent<SpriteRenderer>();
         ani = GetComponent<Animator>();
 
+
         transform.position = new Vector2(10000,10000);
 
         PlayerManager.Instance.players.Add(this);
@@ -92,8 +96,8 @@ public class PlayerController : MonoBehaviour
 
     public void Attack()
     {
-        audioSource.PlayOneShot(attack);
-        
+        if(GameManger.gameStarted)
+            audioSource.PlayOneShot(attack);
     }
 
     public void Initialize()
@@ -110,57 +114,58 @@ public class PlayerController : MonoBehaviour
         PlayerManager.Instance.players.Remove(this);
     }
 
-void OnAim(InputValue inputValue)
-{
-    Vector2 inputVector = inputValue.Get<Vector2>();
-
-    Vector3 aimPosition;
-
-    if(realCam == null)
-        return;
-
-    if (IsUsingMouseInput())
+    void OnAim(InputValue inputValue)
     {
-        // Mouse aiming
-        aimPosition = realCam.ScreenToWorldPoint(inputVector);
-    }
-    else
-    {
-        // Gamepad aiming
-        Vector3 stickDirection = new Vector3(inputVector.x, inputVector.y, 0);
-        aimPosition = transform.position + stickDirection;
-    }
+        if(!GameManger.gameStarted || realCam == null)
+            return;
 
-    aimPosition.z = 0;
+        Vector2 inputVector = inputValue.Get<Vector2>();
 
-    Vector3 direction = (aimPosition - transform.position).normalized;
-    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Vector3 aimPosition;
+    
 
-    rotPivot.rotation = Quaternion.Euler(0, 0, angle + 180);
-    rotPivot.GetComponent<SortingGroup>().sortingOrder = angle > 50 || angle < -95 ? 0 : 1;
+        if (IsUsingMouseInput())
+        {
+            // Mouse aiming
+            aimPosition = realCam.ScreenToWorldPoint(inputVector);
+        }
+        else
+        {
+            // Gamepad aiming
+            Vector3 stickDirection = new Vector3(inputVector.x, inputVector.y, 0);
+            aimPosition = transform.position + stickDirection;
+        }
 
-    spriteR.flipX = aimPosition.x > transform.position.x;
-}
+        aimPosition.z = 0;
 
-// Helper method to check input device type
-private bool IsUsingMouseInput()
-{
-    PlayerInput playerInput = GetComponent<PlayerInput>();
+        Vector3 direction = (aimPosition - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-    if (playerInput != null)
-    {
-        return playerInput.currentControlScheme == "Keyboard&Mouse";
+        rotPivot.rotation = Quaternion.Euler(0, 0, angle + 180);
+        rotPivot.GetComponent<SortingGroup>().sortingOrder = angle > 50 || angle < -95 ? 0 : 1;
+
+        spriteR.flipX = aimPosition.x > transform.position.x;
     }
 
-    Debug.LogWarning("PlayerInput component not found!");
-    return false;
-}
+    // Helper method to check input device type
+    private bool IsUsingMouseInput()
+    {
+        PlayerInput playerInput = GetComponent<PlayerInput>();
+
+        if (playerInput != null)
+        {
+            return playerInput.currentControlScheme == "Keyboard&Mouse";
+        }
+
+        Debug.LogWarning("PlayerInput component not found!");
+        return false;
+    }
 
 
 
     void OnSelect(InputValue inputValue)
     {
-         PlayerManager.Instance.Select(this);
+        PlayerManager.Instance.Select(this);
     }
 
     void OnMove(InputValue inputValue)
@@ -187,16 +192,15 @@ private bool IsUsingMouseInput()
 
     void OnFire(InputValue inputValue)
     {
-        if(!alive)
+        if(!alive || !GameManger.gameStarted)
             return;
         
-
         swordAni.Play("attac");
     }
 
     void OnThrow(InputValue inputValue)
     {
-        if(!alive)
+        if(!alive || !GameManger.gameStarted)
             return;
 
         if(colldown < 0)
@@ -205,14 +209,19 @@ private bool IsUsingMouseInput()
             go.GetComponent<Projectile>().Initialize(this, playerType);
 
             colldown = fish ? 1.5f : 2.5f;
+
+            audioSource.PlayOneShot(shuriken);
         }
 
-       audioSource.PlayOneShot(shuriken);
+       
 
     }
 
     void Update()
     {
+        if(!GameManger.gameStarted)
+            return;
+
         if(UIManger.PAUSE)
         {
             targetVelocity = Vector2.zero;
@@ -230,6 +239,9 @@ private bool IsUsingMouseInput()
 
     void FixedUpdate()
     {
+        if(!GameManger.gameStarted)
+            return;
+
         if(stun <0)
         {
             rb.velocity = Vector2.SmoothDamp(rb.velocity, targetVelocity, ref currentVelocity, smoothTime);
@@ -241,6 +253,7 @@ private bool IsUsingMouseInput()
         
     }
 
+    //does not need if(!GameManger.gameStarted) animation dont play since he cant move if dont started
     public void Step()
     {
         audioSource.PlayOneShot(stepClips[Random.Range(0,stepClips.Count())]);

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraCloner : MonoBehaviour
@@ -41,7 +40,7 @@ public class CameraCloner : MonoBehaviour
                 player.realCam = clonedCamera;
 
                 // Make the cloned camera follow the player
-                CameraFollower follower = clonedCamera.gameObject.AddComponent<CameraFollower>();
+                CameraFollower follower = clonedCamera.GetComponent<CameraFollower>();
                 follower.target = player.transform;
 
                 // Configure the viewport rect for split-screen
@@ -55,6 +54,8 @@ public class CameraCloner : MonoBehaviour
                 Debug.LogWarning("One of the player slots is empty. Skipping.");
             }
         }
+
+        Destroy(gameObject);
     }
 
     // Calculate viewport rect for each player

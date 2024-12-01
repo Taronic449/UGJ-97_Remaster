@@ -98,14 +98,14 @@ public class SelectPlayer : MonoBehaviour
             PlayerManager.Instance.players[1].selected = true;
             image1.color = new Color(1,1,1,0.7f);
 
-            PlayerManager.Instance.players[1].SetPlayerType(0);
+            PlayerManager.Instance.players[1].SetPlayerType(PlayerController.PlayerType.yori);
         }
         else if(iP2 == 1 && image2.color.a > 0.8f)
         {
             PlayerManager.Instance.players[1].selected = true;
             image2.color = new Color(1,1,1,0.7f);
 
-            PlayerManager.Instance.players[1].SetPlayerType(0);
+            PlayerManager.Instance.players[1].SetPlayerType(PlayerController.PlayerType.mei);
         }
 
         selectCount++;

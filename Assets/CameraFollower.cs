@@ -13,5 +13,7 @@ public class CameraFollower : MonoBehaviour
             Vector3 desiredPosition = target.position + offset;
             transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
         }
+
+        GetComponent<CameraBounds>().Confine();
     }
 }

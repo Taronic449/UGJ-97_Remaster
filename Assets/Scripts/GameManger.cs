@@ -17,17 +17,24 @@ public class GameManger : MonoBehaviour
     public CameraCloner cloner;
 
     public bool coop;
+    public static bool gameStarted = false;
 
+
+    void OnDestroy()
+    {
+        gameStarted = false;
+    }
 
     void Awake()
     {
+        gameStarted = true;
+
         HighScore.score1 = 0;
         HighScore.score2 = 0;
 
         if (Instance == null)
         {
             Instance = this;
-
             PlayerManager.Instance.InitializeAll();
 
         }

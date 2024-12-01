@@ -4,6 +4,8 @@ public class CameraBounds : MonoBehaviour
 {
     public BoxCollider2D bounds;  // Assign the BoxCollider2D in the Inspector
     private Camera cam;
+    
+    [Header("Debug")]
     public float camHeight, camWidth;
     public float minX, maxX, minY, maxY;
 
@@ -25,7 +27,7 @@ public class CameraBounds : MonoBehaviour
         maxY = boxBounds.max.y - camHeight;
     }
 
-    void LateUpdate()
+    public void Confine()
     {
         // Restrict the camera's position within the calculated bounds
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
