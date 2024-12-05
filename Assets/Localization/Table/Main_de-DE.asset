@@ -188,6 +188,10 @@ MonoBehaviour:
     m_Localized: Eliminiert alle Feinde auf dem Feld
     m_Metadata:
       m_Items: []
+  - m_Id: 17405682185981952
+    m_Localized: Deutsch
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

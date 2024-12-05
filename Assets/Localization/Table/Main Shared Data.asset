@@ -173,6 +173,10 @@ MonoBehaviour:
     m_Key: Bag Description
     m_Metadata:
       m_Items: []
+  - m_Id: 17405682185981952
+    m_Key: lang
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

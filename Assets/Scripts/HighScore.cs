@@ -25,6 +25,9 @@ public class HighScore : MonoBehaviour
 
             PlayerPrefs.SetInt("Score", (int)Mathf.Max(PlayerPrefs.GetInt("Score"),score1,score2));
         }
+
+        score1 = 0;
+        score2 = 0;
     }
 
 
