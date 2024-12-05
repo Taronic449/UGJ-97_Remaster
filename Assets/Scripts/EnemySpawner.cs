@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemy;
     public float initialSpawnTime = 27f;
-    public float minimumSpawnTime = 4f;
+    public float minimumSpawnTime = 2.5f;
     private float timer;              
     public float difficulty = 1f;
     public float difficultyMultiplier = 0.1f;
@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         if (timer <= 0f)
         {
             spawnEnemy();
-            difficulty += difficultyMultiplier * Mathf.Sqrt(Time.timeSinceLevelLoad);
+            difficulty += difficultyMultiplier * Mathf.Sqrt(Time.timeSinceLevelLoad) / Time.timeSinceLevelLoad;
             float newSpawnTime = Mathf.Max(initialSpawnTime - difficulty, minimumSpawnTime);
             timer = Random.Range(7f, newSpawnTime);
         }

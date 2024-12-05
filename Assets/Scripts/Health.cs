@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     public GameObject damageObj;
     [SerializeField] private bool shield;
     public GameObject shieldT;
+    public bool invinTime;
+    public float invinTimer;
 
     void Awake()
     {
@@ -19,23 +21,33 @@ public class Health : MonoBehaviour
         if(shieldT != null)
             deactivateShield();
     }
+
+    void Update()
+    {
+        if(invinTimer > 0)
+            invinTimer -= Time.deltaTime;
+    }
+
     public void damage(ushort _damage, Vector2 knockback, bool player, PlayerType? playerType)
     {
-        if(!shield)
+        if(!invinTime || invinTimer <= 0)
         {
-            health -= _damage;
-
-            if(health <= 0)
+            if(!shield)
             {
-                deathEvent.Invoke(playerType);
-            }
+                health -= _damage;
 
-            damageEvent.Invoke();
-            
-            showNumber((Vector2) transform.position + new Vector2(Random.Range(0,0.6f) - 0.3f,GetComponent<SpriteRenderer>().bounds.size.y), -_damage);
-        }       
+                if(health <= 0)
+                {
+                    deathEvent.Invoke(playerType);
+                }
 
-        
+                damageEvent.Invoke();
+                
+                showNumber((Vector2) transform.position + new Vector2(Random.Range(0,0.6f) - 0.3f,GetComponent<SpriteRenderer>().bounds.size.y), -_damage);
+
+                invinTimer = 0.3f;
+            }   
+        }
     }
 
     public void showNumber(Vector2 pos, int _damage)

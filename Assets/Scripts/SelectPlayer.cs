@@ -72,6 +72,8 @@ public class SelectPlayer : MonoBehaviour
             image1.color = new Color(1,1,1,0.7f);
 
             PlayerManager.Instance.players[0].SetPlayerType(PlayerController.PlayerType.yori);
+
+            Selected();
         }
         else if(iP1 == 1 && image2.color.a > 0.8f)
         {
@@ -80,15 +82,8 @@ public class SelectPlayer : MonoBehaviour
 
             PlayerManager.Instance.players[0].SetPlayerType(PlayerController.PlayerType.mei);
 
+            Selected();
         }
-
-        selectCount++;
-
-        if(selectCount == 2)
-        {
-            next.interactable = true;
-        }
-
     }
 
     public void SelectP2()
@@ -99,6 +94,8 @@ public class SelectPlayer : MonoBehaviour
             image1.color = new Color(1,1,1,0.7f);
 
             PlayerManager.Instance.players[1].SetPlayerType(PlayerController.PlayerType.yori);
+
+            Selected();
         }
         else if(iP2 == 1 && image2.color.a > 0.8f)
         {
@@ -106,8 +103,13 @@ public class SelectPlayer : MonoBehaviour
             image2.color = new Color(1,1,1,0.7f);
 
             PlayerManager.Instance.players[1].SetPlayerType(PlayerController.PlayerType.mei);
-        }
 
+            Selected();
+        }
+    }
+
+    void Selected()
+    {
         selectCount++;
 
         if(selectCount == 2)

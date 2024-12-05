@@ -272,8 +272,12 @@ public class PlayerController : MonoBehaviour
     }
     public void Death()
     {
+        
+
         if(alive)
         {
+            GameManger.Instance.setHealth(playerType, 0);
+            
             alive = false;
             GetComponent<Health>().enabled = false;
 
@@ -315,7 +319,7 @@ public class PlayerController : MonoBehaviour
             case Effect.KillAllEnemys:
                 foreach (Enemy item in FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
                 {
-                    item.Death(null);
+                    item.Death(playerType);
                 }
             break;
 
