@@ -6069,7 +6069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b4ecc928c36d4459352bab0cc3bb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageCanvas: {fileID: 0}
+  messageCanvas: {fileID: 751944349}
   joiner: {fileID: 0}
 --- !u!4 &439983885
 Transform:

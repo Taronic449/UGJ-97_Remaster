@@ -40,6 +40,15 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
+        time: 0.6666667
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
         time: 0.75
         value: 0
         inSlope: Infinity
@@ -63,7 +72,7 @@ AnimationClip:
       value: {fileID: 1713016540, guid: 263e9ff6691c6f54dbd12364408b1f4d, type: 3}
     - time: 0.5
       value: {fileID: 446219754, guid: 263e9ff6691c6f54dbd12364408b1f4d, type: 3}
-    - time: 0.6666667
+    - time: 0.5833333
       value: {fileID: 1069740732, guid: 263e9ff6691c6f54dbd12364408b1f4d, type: 3}
     attribute: m_Sprite
     path: 
@@ -143,6 +152,15 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
+        time: 0.6666667
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
         time: 0.75
         value: 0
         inSlope: Infinity
@@ -170,7 +188,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.6666667
+  - time: 0.5833333
     functionName: resetForce
     data: 
     objectReferenceParameter: {fileID: 0}

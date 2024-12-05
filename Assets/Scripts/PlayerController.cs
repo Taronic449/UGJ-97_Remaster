@@ -239,7 +239,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(!GameManger.gameStarted)
+        if(!GameManger.gameStarted || !alive)
             return;
 
         if(stun <0)

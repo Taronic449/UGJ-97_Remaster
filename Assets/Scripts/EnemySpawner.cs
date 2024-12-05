@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemy;
     public float initialSpawnTime = 27f;
-    public float minimumSpawnTime = 8f;
+    public float minimumSpawnTime = 4f;
     private float timer;              
     public float difficulty = 1f;
     public float difficultyMultiplier = 0.1f;
