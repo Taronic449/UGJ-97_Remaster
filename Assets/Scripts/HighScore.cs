@@ -8,8 +8,12 @@ public class HighScore : MonoBehaviour
     
     void Awake()
     {
+        GameManger.gameStarted = false;
+
         if(p2 == null)
         {
+            Debug.Log("One Player");
+            
             p1.text = score1.ToString(); 
 
             PlayerPrefs.SetInt("Score", (int)Mathf.Max(PlayerPrefs.GetInt("Score"),score1));
@@ -17,7 +21,7 @@ public class HighScore : MonoBehaviour
         else
         {
             p1.text = score1.ToString(); 
-            p1.text = score2.ToString();
+            p2.text = score2.ToString();
 
             PlayerPrefs.SetInt("Score", (int)Mathf.Max(PlayerPrefs.GetInt("Score"),score1,score2));
         }

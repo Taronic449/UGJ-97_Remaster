@@ -466,6 +466,7 @@ MonoBehaviour:
   yoriA: {fileID: 21300000, guid: 7462697d5d6ed4d4b8891a379b513993, type: 3}
   meiA: {fileID: 21300000, guid: da48d68df8b67e8469ced7885f1ff64e, type: 3}
   playerType: 0
+  indicatorTimer: 0
   attack: {fileID: 8300000, guid: 4de2db52d572c9849ba9486b0575c1dc, type: 3}
   powerUp: {fileID: 8300000, guid: fb8575a51f7963b4696cc1a25368e6ee, type: 3}
   shuriken: {fileID: 8300000, guid: 291502d274e54cf45a7dd69b2238367b, type: 3}
@@ -522,6 +523,8 @@ MonoBehaviour:
   damageObj: {fileID: 2858335105287347822, guid: 407a6df023a6fd9438e60d01ce16442d, type: 3}
   shield: 0
   shieldT: {fileID: 7648201807111805906}
+  invinTime: 0
+  invinTimer: 0
 --- !u!114 &6801250894722103998
 MonoBehaviour:
   m_ObjectHideFlags: 0

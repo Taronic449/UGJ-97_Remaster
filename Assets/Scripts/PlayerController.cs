@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
     {
         if(indicatorTimer <= 0)
         {
-            indicatorTimer = 0.3f;
+            indicatorTimer = 0.2f;
 
             if (xInput > 0)
             {
@@ -295,7 +295,7 @@ public class PlayerController : MonoBehaviour
         if(alive)
         {
             moveInput = Vector2.zero;
-            
+
             GameManger.Instance.setHealth(playerType, 0);
             
             alive = false;
