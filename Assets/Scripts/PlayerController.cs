@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     public Sprite yoriA,meiA;
     public PlayerType playerType;
     private AudioSource audioSource;
-    private float indicatorTimer;
+    public float indicatorTimer;
 
     [Header("Clips")]
     public AudioClip attack;
@@ -173,27 +173,30 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = inputValue.Get<Vector2>();
 
-        if(!selected)
-            UpdateIndicator(moveInput.x);
+
     }
 
     void UpdateIndicator(float xInput)
     {
         if(indicatorTimer <= 0)
         {
-            indicatorTimer = 0.4f;
+            indicatorTimer = 0.3f;
 
             if (xInput > 0)
             {
                 indicator += 1;
+
+                if(indicator > 1)
+                    indicator = 0;
             }
             else if (xInput < 0)
             {
                 indicator -= 1;
+
+                //using underflow for returning to 1
             }
 
-            if(indicator > 1)
-                indicator = 0;
+
 
             indicator = (byte)Mathf.Clamp01(indicator);
         }
@@ -230,6 +233,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(!selected)
+            UpdateIndicator(moveInput.x);
+
         if(indicatorTimer > 0)
             indicatorTimer -= Time.deltaTime;
 
@@ -288,6 +294,8 @@ public class PlayerController : MonoBehaviour
     {
         if(alive)
         {
+            moveInput = Vector2.zero;
+            
             GameManger.Instance.setHealth(playerType, 0);
             
             alive = false;
@@ -302,6 +310,11 @@ public class PlayerController : MonoBehaviour
 
             transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
             ani.SetBool("dead", true);
+
+            foreach (var item in GetComponentsInChildren<Collider2D>())
+            {
+                item.enabled = false;
+            }
         }
         
     }
