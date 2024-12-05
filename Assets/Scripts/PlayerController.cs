@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public Sprite yoriA,meiA;
     public PlayerType playerType;
     private AudioSource audioSource;
+    private float indicatorTimer;
 
     [Header("Clips")]
     public AudioClip attack;
@@ -178,16 +179,26 @@ public class PlayerController : MonoBehaviour
 
     void UpdateIndicator(float xInput)
     {
-        if (xInput > 0)
+        if(indicatorTimer <= 0)
         {
-            indicator += 1;
-        }
-        else if (xInput < 0)
-        {
-            indicator -= 1;
-        }
+            indicatorTimer = 0.4f;
 
-        indicator = (byte)Mathf.Clamp(indicator, 0f, 1f);
+            if (xInput > 0)
+            {
+                indicator += 1;
+            }
+            else if (xInput < 0)
+            {
+                indicator -= 1;
+            }
+
+            if(indicator > 1)
+                indicator = 0;
+
+            indicator = (byte)Mathf.Clamp01(indicator);
+        }
+        
+
     }
 
     void OnFire(InputValue inputValue)
@@ -219,6 +230,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(indicatorTimer > 0)
+            indicatorTimer -= Time.deltaTime;
+
         if(!GameManger.gameStarted)
             return;
 
@@ -272,8 +286,6 @@ public class PlayerController : MonoBehaviour
     }
     public void Death()
     {
-        
-
         if(alive)
         {
             GameManger.Instance.setHealth(playerType, 0);
