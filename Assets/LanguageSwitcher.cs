@@ -9,10 +9,16 @@ public class LanguageSwitcher : MonoBehaviour
 
     private static int currentLanguageIndex = 0;
 
-    void Start()
+    void Awake()
     {
-        // Add listener for the button click
-        languageButton.onClick.AddListener(SwitchLanguage);
+        if(languageButton == null)
+        {
+            Debug.LogWarning("no Button");
+        }
+        else
+        {
+            languageButton.onClick.AddListener(SwitchLanguage);
+        } 
 
         var locales = LocalizationSettings.AvailableLocales.Locales;
         currentLanguageIndex = (currentLanguageIndex + 0) % locales.Count;
