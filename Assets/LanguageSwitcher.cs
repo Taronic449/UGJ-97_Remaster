@@ -7,12 +7,16 @@ public class LanguageSwitcher : MonoBehaviour
 {
     public Button languageButton;
 
-    private int currentLanguageIndex = 0;
+    private static int currentLanguageIndex = 0;
 
     void Start()
     {
         // Add listener for the button click
         languageButton.onClick.AddListener(SwitchLanguage);
+
+        var locales = LocalizationSettings.AvailableLocales.Locales;
+        currentLanguageIndex = (currentLanguageIndex + 0) % locales.Count;
+        LocalizationSettings.SelectedLocale = locales[currentLanguageIndex];
     }
 
     void SwitchLanguage()

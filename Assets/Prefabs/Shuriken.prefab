@@ -330,6 +330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  damage: 2
+  damage: 4
   vel: {x: 0, y: 0}
   timer: 0
+  playerType: 0

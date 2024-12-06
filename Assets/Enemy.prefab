@@ -115,6 +115,7 @@ MonoBehaviour:
   brainType: 0
   smartTimer: 45
   deathSFX: {fileID: 4060885023934376541, guid: 15dbeadc88dd7a94c9317c3e6e32eb0e, type: 3}
+  speedMult: 1
 --- !u!50 &6645913303585039094
 Rigidbody2D:
   serializedVersion: 4
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c519a3464fb1714aa060b147c66d07e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 6
   health: 0
   deathEvent:
     m_PersistentCalls:
@@ -234,6 +235,8 @@ MonoBehaviour:
   damageObj: {fileID: 2858335105287347822, guid: 407a6df023a6fd9438e60d01ce16442d, type: 3}
   shield: 0
   shieldT: {fileID: 0}
+  invinTime: 0
+  invinTimer: 0
 --- !u!95 &6701201282480071791
 Animator:
   serializedVersion: 5

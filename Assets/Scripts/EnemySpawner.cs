@@ -5,15 +5,14 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemy;
-    public float initialSpawnTime = 27f;
-    public float minimumSpawnTime = 2.5f;
+    public DificultyManager dificultyManager;
     private float timer;              
-    public float difficulty = 1f;
-    public float difficultyMultiplier = 0.1f;
 
     void Start()
     {
-        timer = Random.Range(initialSpawnTime - 5, initialSpawnTime);
+        dificultyManager = DificultyManager.Instance;
+
+        timer = Random.Range(dificultyManager.spawnTime - 1.5f, dificultyManager.spawnTime + 1.5f);
     }
 
     void Update()
@@ -23,9 +22,7 @@ public class EnemySpawner : MonoBehaviour
         if (timer <= 0f)
         {
             spawnEnemy();
-            difficulty += difficultyMultiplier * Mathf.Sqrt(Time.timeSinceLevelLoad) / Time.timeSinceLevelLoad;
-            float newSpawnTime = Mathf.Max(initialSpawnTime - difficulty, minimumSpawnTime);
-            timer = Random.Range(7f, newSpawnTime);
+            timer = Random.Range(dificultyManager.spawnTime - 2, dificultyManager.spawnTime + 2);
         }
     }
 

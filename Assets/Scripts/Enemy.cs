@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     public float smartTimer = 15f;
 
     public GameObject deathSFX;
+    public float speedMult = 1;
 
 
     public enum BrainType
@@ -43,6 +44,8 @@ public class Enemy : MonoBehaviour
     {
         brainType = (BrainType)Random.Range(0,4);
 
+        speedMult = Random.Range(DificultyManager.Instance.enemyStreght - 0.2f, DificultyManager.Instance.enemyStreght + 0.2f);
+
         List<PlayerController> players = PlayerManager.Instance.players.ToList();
         players.RemoveAll(player => !player.alive);
 
@@ -53,8 +56,9 @@ public class Enemy : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         agent = GetComponent<NavMeshAgent>();
 
+        agent.speed *= speedMult;
+
         StartBrainEvent();
-        
     }
 
 
@@ -68,7 +72,7 @@ public class Enemy : MonoBehaviour
             if(smartTimer <= 0)
             {
                
-                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff);
+                agent.SetDestination(player.transform.position + (Vector3) startoff);
             }
             else
             {
@@ -81,7 +85,7 @@ public class Enemy : MonoBehaviour
                     startoff = new Vector2(-0.3f,0);
                 }
                 
-                GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff * 15);
+                agent.SetDestination(player.transform.position + (Vector3) startoff * 15);
 
                 if((player.position - transform.position).magnitude < 2f && !ani.GetBool("attack") && timer < 0)
                 {
@@ -96,7 +100,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            GetComponent<NavMeshAgent>().SetDestination(player.transform.position + (Vector3) startoff);
+            agent.SetDestination(player.transform.position + (Vector3) startoff);
         }
 
         sprite.flipX = player.position.x - transform.position.x > 0;
@@ -156,8 +160,8 @@ public class Enemy : MonoBehaviour
                     startoff = new Vector2(-0.3f,0);
                 }
 
-                GetComponent<NavMeshAgent>().speed = 1.5f;
-                GetComponent<NavMeshAgent>().avoidancePriority = 1;
+                agent.speed = 1.5f * speedMult;
+                agent.avoidancePriority = 1;
 
             return;
 
@@ -184,8 +188,8 @@ public class Enemy : MonoBehaviour
             case BrainType.smart:
 
                 smartTimer = -1f;
-                GetComponent<NavMeshAgent>().speed = 2.5f;
-                GetComponent<NavMeshAgent>().avoidancePriority = 1;
+                agent.speed = 2.5f * speedMult;
+                agent.avoidancePriority = 1;
                 startoff = (transform.position - player.transform.position).normalized * 3;
 
             return;
@@ -230,8 +234,8 @@ public class Enemy : MonoBehaviour
 
             case BrainType.smart:
 
-                GetComponent<NavMeshAgent>().speed = 1.5f;
-                GetComponent<NavMeshAgent>().avoidancePriority = 10;
+                agent.speed = 1.5f * speedMult;
+                agent.avoidancePriority = 10;
 
                 GetComponent<Animator>().speed = 1.3f;
 
@@ -249,7 +253,7 @@ public class Enemy : MonoBehaviour
                     startoff = new Vector2(-0.3f,0);
                 }
 
-                GetComponent<NavMeshAgent>().speed = 1.5f;
+                agent.speed = 1.5f * speedMult;
                 GetComponent<Animator>().speed = 1.5f;
             return;
 

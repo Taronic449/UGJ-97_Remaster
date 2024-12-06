@@ -260,7 +260,11 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if(!GameManger.gameStarted || !alive)
+        {
+            rb.velocity = Vector2.zero;
+            
             return;
+        }
 
         if(stun <0)
         {

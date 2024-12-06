@@ -4,7 +4,7 @@ using UnityEngine;
 public class EmblemManger : MonoBehaviour
 {
     public static EmblemManger Instance;
-    public List<ushort> IDs = new();
+    
 
     void Awake()
     {
@@ -24,7 +24,7 @@ public class EmblemManger : MonoBehaviour
 
     void UpdateEmblems()
     {
-        
+        List<ushort> IDs = new();
 
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("Item"))
         {
