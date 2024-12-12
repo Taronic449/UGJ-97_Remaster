@@ -117,10 +117,6 @@ MonoBehaviour:
     m_Localized: "Hauptmen\xFC"
     m_Metadata:
       m_Items: []
-  - m_Id: 13934157852102656
-    m_Localized: "Zur\xFCck"
-    m_Metadata:
-      m_Items: []
   - m_Id: 13934106933252096
     m_Localized: Lore
     m_Metadata:
@@ -177,7 +173,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13939160310403072
-    m_Localized: Stellt die Gesundheit des Spielers wieder her
+    m_Localized: Stellt die Gesundheit des Spielers wieder her.
     m_Metadata:
       m_Items: []
   - m_Id: 13939196947648512

@@ -19,15 +19,170 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 122562072576
-    m_Localized: 
+    m_Localized: Jugar
     m_Metadata:
       m_Items: []
   - m_Id: 3107027472384
-    m_Localized: 
+    m_Localized: Cooperativo
     m_Metadata:
       m_Items: []
   - m_Id: 17405682185981952
     m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12899454126706688
+    m_Localized: "Tu puntuaci\xF3n:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13925353966063616
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13925425650913280
+    m_Localized: "Taronic449 - Dise\xF1ador de niveles, Artista 2D, Animador 2D\nPingu
+      - Programador, Tester de QA, Traductor al alem\xE1n\nBright Maddox - Dise\xF1ador
+      de sonido\nBard Sound Lab - Dise\xF1ador de sonido\nTurtleBox - Compositor
+      musical\nRise - Traductor al espa\xF1ol\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13926885344202752
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3817563541504
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3109023961088
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3110898814976
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3366617141248
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11875655063228416
+    m_Localized: "\xA1La batalla ha terminado!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876232685998080
+    m_Localized: Jugar de nuevo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11876507421298688
+    m_Localized: Inicio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12896929214418944
+    m_Localized: "Puntuaci\xF3n P1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12897000488226816
+    m_Localized: "Puntuaci\xF3n P2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13926902691844096
+    m_Localized: Efectos de sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13928174018940928
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13928347394691072
+    m_Localized: Reanudar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929194967060480
+    m_Localized: Selecciona un personaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929366828666880
+    m_Localized: "C\xF3mo conectar:\nTeclado - Barra espaciadora\nMando - Bot\xF3n
+      A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13929391826718720
+    m_Localized: Siguiente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13933251995684864
+    m_Localized: Elige un nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13933439162306560
+    m_Localized: "Men\xFA principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934106933252096
+    m_Localized: Historia de fondo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13934259702386688
+    m_Localized: "\xA1La tierra natal de Yori est\xE1 bajo ataque! Los Danuja Ronin,
+      una clase de perros expertos en combate con espadas, han sembrado el caos en
+      la regi\xF3n. Con nadie m\xE1s que pueda detener a estos bandidos, Yori debe
+      prepararse y llevar la lucha hasta ellos.\r\n\r\n\xA1Derrota a cada enemigo
+      y acumula tu puntuaci\xF3n! Solo t\xFA puedes preservar la paz en el hogar
+      de Yori."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935863939780608
+    m_Localized: Mando Xbox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935202846167040
+    m_Localized: "Teclado y Rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13935224245506048
+    m_Localized: "Teclas WASD para mover\r\nBarra espaciadora para disparar\r\nRat\xF3n
+      para girar\r\nClic izquierdo para atacar con la espada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936066851819520
+    m_Localized: "Joystick izquierdo para mover\r\nJoystick derecho para girar\r\nBot\xF3n
+      RB para disparar\r\nBot\xF3n RT para atacar con la espada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936901463789568
+    m_Localized: Objetos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937368772169728
+    m_Localized: Lata de sardinas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13936951048851456
+    m_Localized: Permite al jugador disparar peces. Cada pez elimina a un enemigo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937371741736960
+    m_Localized: Ovillo de lana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13937374547726336
+    m_Localized: "Crea un escudo que protege al jugador del da\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939100369604608
+    m_Localized: Botella de leche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939160310403072
+    m_Localized: Restaura la salud del jugador.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939196947648512
+    m_Localized: Bolsa de comida para gatos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13939485431877632
+    m_Localized: Elimina a todos los enemigos en el campo.
     m_Metadata:
       m_Items: []
   references:

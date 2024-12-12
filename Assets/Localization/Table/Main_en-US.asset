@@ -130,10 +130,6 @@ MonoBehaviour:
     m_Localized: Main Menu
     m_Metadata:
       m_Items: []
-  - m_Id: 13934157852102656
-    m_Localized: Back
-    m_Metadata:
-      m_Items: []
   - m_Id: 13934106933252096
     m_Localized: Backstory
     m_Metadata:
@@ -204,7 +200,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13939160310403072
-    m_Localized: Restores player's health
+    m_Localized: Restores player's health.
     m_Metadata:
       m_Items: []
   - m_Id: 13939196947648512

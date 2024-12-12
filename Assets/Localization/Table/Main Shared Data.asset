@@ -111,12 +111,6 @@ MonoBehaviour:
     m_Key: Backstory
     m_Metadata:
       m_Items: []
-  - m_Id: 13934157852102656
-    m_Key: 'Back
-
-'
-    m_Metadata:
-      m_Items: []
   - m_Id: 13934259702386688
     m_Key: BackstoryText
     m_Metadata:
